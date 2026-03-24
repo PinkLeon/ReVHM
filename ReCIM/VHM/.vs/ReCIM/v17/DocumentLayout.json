@@ -1,0 +1,527 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Git\\VHM\\NewFolder\\ReCIM\\VHM\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{834BA4C1-4447-4EFA-BFEE-73E6C48DBF36}|..\\UI\\UI.csproj|d:\\git\\vhm\\newfolder\\recim\\ui\\page\\testification.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{834BA4C1-4447-4EFA-BFEE-73E6C48DBF36}|..\\UI\\UI.csproj|d:\\git\\vhm\\newfolder\\recim\\ui\\page\\testification.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{978D1BEC-6668-4A59-945C-7E445F98DD2C}|..\\Core\\Core.csproj|d:\\git\\vhm\\newfolder\\recim\\core\\model\\coreparameter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{978D1BEC-6668-4A59-945C-7E445F98DD2C}|..\\Core\\Core.csproj|d:\\git\\vhm\\newfolder\\recim\\core\\interface\\icoreparameter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{978D1BEC-6668-4A59-945C-7E445F98DD2C}|..\\Core\\Core.csproj|d:\\git\\vhm\\newfolder\\recim\\core\\interface\\result.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C5BB663B-4674-469E-8B4B-E89D731BF92F}|..\\AOIProject\\AOIProject.csproj|d:\\git\\vhm\\newfolder\\recim\\aoiproject\\model\\aoicontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C5BB663B-4674-469E-8B4B-E89D731BF92F}|..\\AOIProject\\AOIProject.csproj|d:\\git\\vhm\\newfolder\\recim\\aoiproject\\aoiperform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{978D1BEC-6668-4A59-945C-7E445F98DD2C}|..\\Core\\Core.csproj|d:\\git\\vhm\\newfolder\\recim\\core\\implementation\\missingline.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{978D1BEC-6668-4A59-945C-7E445F98DD2C}|..\\Core\\Core.csproj|d:\\git\\vhm\\newfolder\\recim\\core\\implementation\\backdirty.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{978D1BEC-6668-4A59-945C-7E445F98DD2C}|..\\Core\\Core.csproj|d:\\git\\vhm\\newfolder\\recim\\core\\interface\\measurement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{978D1BEC-6668-4A59-945C-7E445F98DD2C}|..\\Core\\Core.csproj|d:\\git\\vhm\\newfolder\\recim\\core\\model\\aoicore.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{978D1BEC-6668-4A59-945C-7E445F98DD2C}|..\\Core\\Core.csproj|d:\\git\\vhm\\newfolder\\recim\\core\\model\\testspectation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{978D1BEC-6668-4A59-945C-7E445F98DD2C}|..\\Core\\Core.csproj|d:\\git\\vhm\\newfolder\\recim\\core\\interface\\flowprocess.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{978D1BEC-6668-4A59-945C-7E445F98DD2C}|..\\Core\\Core.csproj|d:\\git\\vhm\\newfolder\\recim\\core\\implementation\\bsimaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{978D1BEC-6668-4A59-945C-7E445F98DD2C}|..\\Core\\Core.csproj|d:\\git\\vhm\\newfolder\\recim\\core\\implementation\\fsimaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{978D1BEC-6668-4A59-945C-7E445F98DD2C}|..\\Core\\Core.csproj|d:\\git\\vhm\\newfolder\\recim\\core\\implementation\\backmeasurement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{978D1BEC-6668-4A59-945C-7E445F98DD2C}|..\\Core\\Core.csproj|d:\\git\\vhm\\newfolder\\recim\\core\\implementation\\frontmeasurement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{978D1BEC-6668-4A59-945C-7E445F98DD2C}|..\\Core\\Core.csproj|d:\\git\\vhm\\newfolder\\recim\\core\\implementation\\frontdirty.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{978D1BEC-6668-4A59-945C-7E445F98DD2C}|..\\Core\\Core.csproj|d:\\git\\vhm\\newfolder\\recim\\core\\interface\\iaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{834BA4C1-4447-4EFA-BFEE-73E6C48DBF36}|..\\UI\\UI.csproj|d:\\git\\vhm\\newfolder\\recim\\ui\\unitest\\unitestflow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{978D1BEC-6668-4A59-945C-7E445F98DD2C}|..\\Core\\Core.csproj|d:\\git\\vhm\\newfolder\\recim\\core\\implementation\\frontinspection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{978D1BEC-6668-4A59-945C-7E445F98DD2C}|..\\Core\\Core.csproj|d:\\git\\vhm\\newfolder\\recim\\core\\implementation\\blcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{978D1BEC-6668-4A59-945C-7E445F98DD2C}|..\\Core\\Core.csproj|d:\\git\\vhm\\newfolder\\recim\\core\\implementation\\flcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{978D1BEC-6668-4A59-945C-7E445F98DD2C}|..\\Core\\Core.csproj|d:\\git\\vhm\\newfolder\\recim\\core\\implementation\\frontaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{978D1BEC-6668-4A59-945C-7E445F98DD2C}|..\\Core\\Core.csproj|d:\\git\\vhm\\newfolder\\recim\\core\\implementation\\baction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{978D1BEC-6668-4A59-945C-7E445F98DD2C}|..\\Core\\Core.csproj|d:\\git\\vhm\\newfolder\\recim\\core\\implementation\\faction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{978D1BEC-6668-4A59-945C-7E445F98DD2C}|..\\Core\\Core.csproj|d:\\git\\vhm\\newfolder\\recim\\core\\implementation\\frontgenimage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{834BA4C1-4447-4EFA-BFEE-73E6C48DBF36}|..\\UI\\UI.csproj|d:\\git\\vhm\\newfolder\\recim\\ui\\setting.ini||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{978D1BEC-6668-4A59-945C-7E445F98DD2C}|..\\Core\\Core.csproj|d:\\git\\vhm\\newfolder\\recim\\core\\implementation\\backgenimage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{978D1BEC-6668-4A59-945C-7E445F98DD2C}|..\\Core\\Core.csproj|d:\\git\\vhm\\newfolder\\recim\\core\\interface\\action.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{978D1BEC-6668-4A59-945C-7E445F98DD2C}|..\\Core\\Core.csproj|d:\\git\\vhm\\newfolder\\recim\\core\\model\\displayitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 467,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{13b12e3e-c1b4-4539-9371-4fe9a0d523fc}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Testification.xaml.cs",
+              "DocumentMoniker": "D:\\Git\\VHM\\NewFolder\\ReCIM\\UI\\Page\\Testification.xaml.cs",
+              "RelativeDocumentMoniker": "..\\UI\\Page\\Testification.xaml.cs",
+              "ToolTip": "D:\\Git\\VHM\\NewFolder\\ReCIM\\UI\\Page\\Testification.xaml.cs",
+              "RelativeToolTip": "..\\UI\\Page\\Testification.xaml.cs",
+              "ViewState": "AgIAADkBAAAAAAAAAAAAwEQBAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-24T13:54:48.942Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "AOIPerform.cs",
+              "DocumentMoniker": "D:\\Git\\VHM\\NewFolder\\ReCIM\\AOIProject\\AOIPerform.cs",
+              "RelativeDocumentMoniker": "..\\AOIProject\\AOIPerform.cs",
+              "ToolTip": "D:\\Git\\VHM\\NewFolder\\ReCIM\\AOIProject\\AOIPerform.cs",
+              "RelativeToolTip": "..\\AOIProject\\AOIPerform.cs",
+              "ViewState": "AgIAAGUAAAAAAAAAAAAswGsAAABEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-15T10:02:33.538Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "AOICore.cs",
+              "DocumentMoniker": "D:\\Git\\VHM\\NewFolder\\ReCIM\\Core\\Model\\AOICore.cs",
+              "RelativeDocumentMoniker": "..\\Core\\Model\\AOICore.cs",
+              "ToolTip": "D:\\Git\\VHM\\NewFolder\\ReCIM\\Core\\Model\\AOICore.cs",
+              "RelativeToolTip": "..\\Core\\Model\\AOICore.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAA0wCAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-16T11:00:50.294Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Result.cs",
+              "DocumentMoniker": "D:\\Git\\VHM\\NewFolder\\ReCIM\\Core\\Interface\\Result.cs",
+              "RelativeDocumentMoniker": "..\\Core\\Interface\\Result.cs",
+              "ToolTip": "D:\\Git\\VHM\\NewFolder\\ReCIM\\Core\\Interface\\Result.cs",
+              "RelativeToolTip": "..\\Core\\Interface\\Result.cs",
+              "ViewState": "AgIAAEUAAAAAAAAAAAAswEkAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-17T12:39:31.999Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Measurement.cs",
+              "DocumentMoniker": "D:\\Git\\VHM\\NewFolder\\ReCIM\\Core\\Interface\\Measurement.cs",
+              "RelativeDocumentMoniker": "..\\Core\\Interface\\Measurement.cs",
+              "ToolTip": "D:\\Git\\VHM\\NewFolder\\ReCIM\\Core\\Interface\\Measurement.cs",
+              "RelativeToolTip": "..\\Core\\Interface\\Measurement.cs",
+              "ViewState": "AgIAADAAAAAAAAAAAIA5wDwAAABSAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-15T09:41:45.336Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "MissingLine.cs",
+              "DocumentMoniker": "D:\\Git\\VHM\\NewFolder\\ReCIM\\Core\\Implementation\\MissingLine.cs",
+              "RelativeDocumentMoniker": "..\\Core\\Implementation\\MissingLine.cs",
+              "ToolTip": "D:\\Git\\VHM\\NewFolder\\ReCIM\\Core\\Implementation\\MissingLine.cs",
+              "RelativeToolTip": "..\\Core\\Implementation\\MissingLine.cs",
+              "ViewState": "AgIAAF4AAAAAAAAAAAAswHIAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-15T09:41:53.219Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ICoreParameter.cs",
+              "DocumentMoniker": "D:\\Git\\VHM\\NewFolder\\ReCIM\\Core\\Interface\\ICoreParameter.cs",
+              "RelativeDocumentMoniker": "..\\Core\\Interface\\ICoreParameter.cs",
+              "ToolTip": "D:\\Git\\VHM\\NewFolder\\ReCIM\\Core\\Interface\\ICoreParameter.cs",
+              "RelativeToolTip": "..\\Core\\Interface\\ICoreParameter.cs",
+              "ViewState": "AgIAADoAAAAAAAAAAAArwDoAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-24T15:38:08.116Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CoreParameter.cs",
+              "DocumentMoniker": "D:\\Git\\VHM\\NewFolder\\ReCIM\\Core\\Model\\CoreParameter.cs",
+              "RelativeDocumentMoniker": "..\\Core\\Model\\CoreParameter.cs",
+              "ToolTip": "D:\\Git\\VHM\\NewFolder\\ReCIM\\Core\\Model\\CoreParameter.cs",
+              "RelativeToolTip": "..\\Core\\Model\\CoreParameter.cs",
+              "ViewState": "AgIAAGUBAAAAAAAAAAAtwHcBAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-24T15:38:41.578Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Testification.xaml",
+              "DocumentMoniker": "D:\\Git\\VHM\\NewFolder\\ReCIM\\UI\\Page\\Testification.xaml",
+              "RelativeDocumentMoniker": "..\\UI\\Page\\Testification.xaml",
+              "ToolTip": "D:\\Git\\VHM\\NewFolder\\ReCIM\\UI\\Page\\Testification.xaml",
+              "RelativeToolTip": "..\\UI\\Page\\Testification.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-03-23T11:37:41.874Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "AOIContext.cs",
+              "DocumentMoniker": "D:\\Git\\VHM\\NewFolder\\ReCIM\\AOIProject\\Model\\AOIContext.cs",
+              "RelativeDocumentMoniker": "..\\AOIProject\\Model\\AOIContext.cs",
+              "ToolTip": "D:\\Git\\VHM\\NewFolder\\ReCIM\\AOIProject\\Model\\AOIContext.cs",
+              "RelativeToolTip": "..\\AOIProject\\Model\\AOIContext.cs",
+              "ViewState": "AgIAADgAAAAAAAAAAAAswEMAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-15T09:48:55.994Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "FSimAction.cs",
+              "DocumentMoniker": "D:\\Git\\VHM\\NewFolder\\ReCIM\\Core\\Implementation\\FSimAction.cs",
+              "RelativeDocumentMoniker": "..\\Core\\Implementation\\FSimAction.cs",
+              "ToolTip": "D:\\Git\\VHM\\NewFolder\\ReCIM\\Core\\Implementation\\FSimAction.cs",
+              "RelativeToolTip": "..\\Core\\Implementation\\FSimAction.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAADwvw4AAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-12T14:29:20.934Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "BSimAction.cs",
+              "DocumentMoniker": "D:\\Git\\VHM\\NewFolder\\ReCIM\\Core\\Implementation\\BSimAction.cs",
+              "RelativeDocumentMoniker": "..\\Core\\Implementation\\BSimAction.cs",
+              "ToolTip": "D:\\Git\\VHM\\NewFolder\\ReCIM\\Core\\Implementation\\BSimAction.cs",
+              "RelativeToolTip": "..\\Core\\Implementation\\BSimAction.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAswB8AAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-12T14:30:13.618Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "FlowProcess.cs",
+              "DocumentMoniker": "D:\\Git\\VHM\\NewFolder\\ReCIM\\Core\\Interface\\FlowProcess.cs",
+              "RelativeDocumentMoniker": "..\\Core\\Interface\\FlowProcess.cs",
+              "ToolTip": "D:\\Git\\VHM\\NewFolder\\ReCIM\\Core\\Interface\\FlowProcess.cs",
+              "RelativeToolTip": "..\\Core\\Interface\\FlowProcess.cs",
+              "ViewState": "AgIAACIAAAAAAAAAAAAuwC0AAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-12T13:06:14.436Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "BackDirty.cs",
+              "DocumentMoniker": "D:\\Git\\VHM\\NewFolder\\ReCIM\\Core\\Implementation\\BackDirty.cs",
+              "RelativeDocumentMoniker": "..\\Core\\Implementation\\BackDirty.cs",
+              "ToolTip": "D:\\Git\\VHM\\NewFolder\\ReCIM\\Core\\Implementation\\BackDirty.cs",
+              "RelativeToolTip": "..\\Core\\Implementation\\BackDirty.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAASwBsAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-15T09:54:36.924Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "TestSpectation.cs",
+              "DocumentMoniker": "D:\\Git\\VHM\\NewFolder\\ReCIM\\Core\\Model\\TestSpectation.cs",
+              "RelativeDocumentMoniker": "..\\Core\\Model\\TestSpectation.cs",
+              "ToolTip": "D:\\Git\\VHM\\NewFolder\\ReCIM\\Core\\Model\\TestSpectation.cs",
+              "RelativeToolTip": "..\\Core\\Model\\TestSpectation.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAwwAgAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-22T09:20:08.492Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "BackMeasurement.cs",
+              "DocumentMoniker": "D:\\Git\\VHM\\NewFolder\\ReCIM\\Core\\Implementation\\BackMeasurement.cs",
+              "RelativeDocumentMoniker": "..\\Core\\Implementation\\BackMeasurement.cs",
+              "ToolTip": "D:\\Git\\VHM\\NewFolder\\ReCIM\\Core\\Implementation\\BackMeasurement.cs",
+              "RelativeToolTip": "..\\Core\\Implementation\\BackMeasurement.cs",
+              "ViewState": "AgIAACYAAAAAAAAAAAAIwCcAAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-15T09:58:48.607Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "FrontDirty.cs",
+              "DocumentMoniker": "D:\\Git\\VHM\\NewFolder\\ReCIM\\Core\\Implementation\\FrontDirty.cs",
+              "RelativeDocumentMoniker": "..\\Core\\Implementation\\FrontDirty.cs",
+              "ToolTip": "D:\\Git\\VHM\\NewFolder\\ReCIM\\Core\\Implementation\\FrontDirty.cs",
+              "RelativeToolTip": "..\\Core\\Implementation\\FrontDirty.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAA4wBEAAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-15T09:47:30.737Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "FrontMeasurement.cs",
+              "DocumentMoniker": "D:\\Git\\VHM\\NewFolder\\ReCIM\\Core\\Implementation\\FrontMeasurement.cs",
+              "RelativeDocumentMoniker": "..\\Core\\Implementation\\FrontMeasurement.cs",
+              "ToolTip": "D:\\Git\\VHM\\NewFolder\\ReCIM\\Core\\Implementation\\FrontMeasurement.cs",
+              "RelativeToolTip": "..\\Core\\Implementation\\FrontMeasurement.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAiwCcAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-24T15:35:45.882Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "IAction.cs",
+              "DocumentMoniker": "D:\\Git\\VHM\\NewFolder\\ReCIM\\Core\\Interface\\IAction.cs",
+              "RelativeDocumentMoniker": "..\\Core\\Interface\\IAction.cs",
+              "ToolTip": "D:\\Git\\VHM\\NewFolder\\ReCIM\\Core\\Interface\\IAction.cs",
+              "RelativeToolTip": "..\\Core\\Interface\\IAction.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAApwBEAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-12T13:11:22.55Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "Unitestflow.xaml.cs",
+              "DocumentMoniker": "D:\\Git\\VHM\\NewFolder\\ReCIM\\UI\\Unitest\\Unitestflow.xaml.cs",
+              "RelativeDocumentMoniker": "..\\UI\\Unitest\\Unitestflow.xaml.cs",
+              "ToolTip": "D:\\Git\\VHM\\NewFolder\\ReCIM\\UI\\Unitest\\Unitestflow.xaml.cs",
+              "RelativeToolTip": "..\\UI\\Unitest\\Unitestflow.xaml.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAYwCkAAABTAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-17T13:38:14.503Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "FrontInspection.cs",
+              "DocumentMoniker": "D:\\Git\\VHM\\NewFolder\\ReCIM\\Core\\Implementation\\FrontInspection.cs",
+              "RelativeDocumentMoniker": "..\\Core\\Implementation\\FrontInspection.cs",
+              "ToolTip": "D:\\Git\\VHM\\NewFolder\\ReCIM\\Core\\Implementation\\FrontInspection.cs",
+              "RelativeToolTip": "..\\Core\\Implementation\\FrontInspection.cs",
+              "ViewState": "AgIAACcAAAAAAAAAAAAQwDEAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-17T13:24:08.396Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "BLControl.cs",
+              "DocumentMoniker": "D:\\Git\\VHM\\NewFolder\\ReCIM\\Core\\Implementation\\BLControl.cs",
+              "RelativeDocumentMoniker": "..\\Core\\Implementation\\BLControl.cs",
+              "ToolTip": "D:\\Git\\VHM\\NewFolder\\ReCIM\\Core\\Implementation\\BLControl.cs",
+              "RelativeToolTip": "..\\Core\\Implementation\\BLControl.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABAAAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-15T09:32:43.655Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "BAction.cs",
+              "DocumentMoniker": "D:\\Git\\VHM\\NewFolder\\ReCIM\\Core\\Implementation\\BAction.cs",
+              "RelativeDocumentMoniker": "..\\Core\\Implementation\\BAction.cs",
+              "ToolTip": "D:\\Git\\VHM\\NewFolder\\ReCIM\\Core\\Implementation\\BAction.cs",
+              "RelativeToolTip": "..\\Core\\Implementation\\BAction.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAIwBUAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-12T14:18:34.409Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "FrontGenImage.cs",
+              "DocumentMoniker": "D:\\Git\\VHM\\NewFolder\\ReCIM\\Core\\Implementation\\FrontGenImage.cs",
+              "RelativeDocumentMoniker": "..\\Core\\Implementation\\FrontGenImage.cs",
+              "ToolTip": "D:\\Git\\VHM\\NewFolder\\ReCIM\\Core\\Implementation\\FrontGenImage.cs",
+              "RelativeToolTip": "..\\Core\\Implementation\\FrontGenImage.cs",
+              "ViewState": "AgIAAB0AAAAAAAAAAAA3wAUAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-24T14:41:37.183Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "FLControl.cs",
+              "DocumentMoniker": "D:\\Git\\VHM\\NewFolder\\ReCIM\\Core\\Implementation\\FLControl.cs",
+              "RelativeDocumentMoniker": "..\\Core\\Implementation\\FLControl.cs",
+              "ToolTip": "D:\\Git\\VHM\\NewFolder\\ReCIM\\Core\\Implementation\\FLControl.cs",
+              "RelativeToolTip": "..\\Core\\Implementation\\FLControl.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAwAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-24T14:40:46.903Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "FrontAction.cs",
+              "DocumentMoniker": "D:\\Git\\VHM\\NewFolder\\ReCIM\\Core\\Implementation\\FrontAction.cs",
+              "RelativeDocumentMoniker": "..\\Core\\Implementation\\FrontAction.cs",
+              "ToolTip": "D:\\Git\\VHM\\NewFolder\\ReCIM\\Core\\Implementation\\FrontAction.cs",
+              "RelativeToolTip": "..\\Core\\Implementation\\FrontAction.cs",
+              "ViewState": "AgIAAE8AAAAAAAAAAAAYwFsAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-24T14:31:33.548Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "FAction.cs",
+              "DocumentMoniker": "D:\\Git\\VHM\\NewFolder\\ReCIM\\Core\\Implementation\\FAction.cs",
+              "RelativeDocumentMoniker": "..\\Core\\Implementation\\FAction.cs",
+              "ToolTip": "D:\\Git\\VHM\\NewFolder\\ReCIM\\Core\\Implementation\\FAction.cs",
+              "RelativeToolTip": "..\\Core\\Implementation\\FAction.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAA0wBkAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-12T13:18:14.723Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "BackGenImage.cs",
+              "DocumentMoniker": "D:\\Git\\VHM\\NewFolder\\ReCIM\\Core\\Implementation\\BackGenImage.cs",
+              "RelativeDocumentMoniker": "..\\Core\\Implementation\\BackGenImage.cs",
+              "ToolTip": "D:\\Git\\VHM\\NewFolder\\ReCIM\\Core\\Implementation\\BackGenImage.cs",
+              "RelativeToolTip": "..\\Core\\Implementation\\BackGenImage.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-12T15:46:10.13Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "Setting.ini",
+              "DocumentMoniker": "D:\\Git\\VHM\\NewFolder\\ReCIM\\UI\\Setting.ini",
+              "RelativeDocumentMoniker": "..\\UI\\Setting.ini",
+              "ToolTip": "D:\\Git\\VHM\\NewFolder\\ReCIM\\UI\\Setting.ini",
+              "RelativeToolTip": "..\\UI\\Setting.ini",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABYAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002768|",
+              "WhenOpened": "2026-03-14T08:05:00.32Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "Action.cs",
+              "DocumentMoniker": "D:\\Git\\VHM\\NewFolder\\ReCIM\\Core\\Interface\\Action.cs",
+              "RelativeDocumentMoniker": "..\\Core\\Interface\\Action.cs",
+              "ToolTip": "D:\\Git\\VHM\\NewFolder\\ReCIM\\Core\\Interface\\Action.cs",
+              "RelativeToolTip": "..\\Core\\Interface\\Action.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAD4vxcAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-24T14:59:04.511Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "DisplayItem.cs",
+              "DocumentMoniker": "D:\\Git\\VHM\\NewFolder\\ReCIM\\Core\\Model\\DisplayItem.cs",
+              "RelativeDocumentMoniker": "..\\Core\\Model\\DisplayItem.cs",
+              "ToolTip": "D:\\Git\\VHM\\NewFolder\\ReCIM\\Core\\Model\\DisplayItem.cs",
+              "RelativeToolTip": "..\\Core\\Model\\DisplayItem.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-24T15:38:32.391Z"
+            }
+          ]
+        },
+        {
+          "DockedHeight": 175,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            }
+          ]
+        },
+        {
+          "DockedHeight": 688,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
+            }
+          ]
+        },
+        {
+          "DockedHeight": 688,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

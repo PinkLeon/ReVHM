@@ -1,0 +1,8 @@
+D:\Git\VHM\新增資料夾\ReCIM\AOI\obj\Debug\AOI.csproj.AssemblyReference.cache
+D:\Git\VHM\新增資料夾\ReCIM\AOI\obj\Debug\MainWindow.g.cs
+D:\Git\VHM\新增資料夾\ReCIM\AOI\obj\Debug\App.g.cs
+D:\Git\VHM\新增資料夾\ReCIM\AOI\obj\Debug\AOI_MarkupCompile.cache
+D:\Git\VHM\新增資料夾\ReCIM\AOI\obj\Debug\AOI_MarkupCompile.lref
+D:\Git\VHM\新增資料夾\ReCIM\AOI\obj\Debug\AOI.Properties.Resources.resources
+D:\Git\VHM\新增資料夾\ReCIM\AOI\obj\Debug\AOI.csproj.GenerateResource.cache
+D:\Git\VHM\新增資料夾\ReCIM\AOI\obj\Debug\AOI.csproj.CoreCompileInputs.cache

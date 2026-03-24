@@ -1,0 +1,17 @@
+D:\Git\VHM\新增資料夾\ReCIM\AOIProject\bin\Debug\net8.0-windows\AOIProject.deps.json
+D:\Git\VHM\新增資料夾\ReCIM\AOIProject\bin\Debug\net8.0-windows\AOIProject.dll
+D:\Git\VHM\新增資料夾\ReCIM\AOIProject\bin\Debug\net8.0-windows\AOIProject.pdb
+D:\Git\VHM\新增資料夾\ReCIM\AOIProject\bin\Debug\net8.0-windows\halcondotnet.dll
+D:\Git\VHM\新增資料夾\ReCIM\AOIProject\bin\Debug\net8.0-windows\VHM.exe
+D:\Git\VHM\新增資料夾\ReCIM\AOIProject\bin\Debug\net8.0-windows\VHM.pdb
+D:\Git\VHM\新增資料夾\ReCIM\AOIProject\bin\Debug\net8.0-windows\VHM.exe.config
+D:\Git\VHM\新增資料夾\ReCIM\AOIProject\obj\Debug\net8.0-windows\AOIProject.csproj.AssemblyReference.cache
+D:\Git\VHM\新增資料夾\ReCIM\AOIProject\obj\Debug\net8.0-windows\AOIProject.GeneratedMSBuildEditorConfig.editorconfig
+D:\Git\VHM\新增資料夾\ReCIM\AOIProject\obj\Debug\net8.0-windows\AOIProject.AssemblyInfoInputs.cache
+D:\Git\VHM\新增資料夾\ReCIM\AOIProject\obj\Debug\net8.0-windows\AOIProject.AssemblyInfo.cs
+D:\Git\VHM\新增資料夾\ReCIM\AOIProject\obj\Debug\net8.0-windows\AOIProject.csproj.CoreCompileInputs.cache
+D:\Git\VHM\新增資料夾\ReCIM\AOIProject\obj\Debug\net8.0-windows\AOIProject.csproj.Up2Date
+D:\Git\VHM\新增資料夾\ReCIM\AOIProject\obj\Debug\net8.0-windows\AOIProject.dll
+D:\Git\VHM\新增資料夾\ReCIM\AOIProject\obj\Debug\net8.0-windows\refint\AOIProject.dll
+D:\Git\VHM\新增資料夾\ReCIM\AOIProject\obj\Debug\net8.0-windows\AOIProject.pdb
+D:\Git\VHM\新增資料夾\ReCIM\AOIProject\obj\Debug\net8.0-windows\ref\AOIProject.dll

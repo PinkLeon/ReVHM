@@ -1,0 +1,139 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:lang="clr-namespace:System;assembly=mscorlib">
+    <!--  General  -->
+    <lang:String x:Key="Main">主頁</lang:String>
+    <lang:String x:Key="Inspection">檢測</lang:String>
+    <lang:String x:Key="Calibration">校正</lang:String>
+    <lang:String x:Key="Report">報表</lang:String>
+    <lang:String x:Key="UserManagement">使用者管理</lang:String>
+    <lang:String x:Key="RecipeManagement">配方管理</lang:String>
+    <lang:String x:Key="Initialize">初始化</lang:String>
+    <lang:String x:Key="Add">新增</lang:String>
+    <lang:String x:Key="Activate">啟用</lang:String>
+    <lang:String x:Key="Deactivate">停用</lang:String>
+    <lang:String x:Key="Suspend">停用</lang:String>
+    <lang:String x:Key="Save">儲存</lang:String>
+    <lang:String x:Key="Exit">離開</lang:String>
+    <lang:String x:Key="Close">關閉</lang:String>
+    <lang:String x:Key="Item">項目</lang:String>
+
+    <!--  Recipe  -->
+    <lang:String x:Key="Search">查詢</lang:String>
+    <lang:String x:Key="Go">Go</lang:String>
+
+    <!--  Setting  -->
+    <lang:String x:Key="Setting">設定</lang:String>
+
+    <lang:String x:Key="TestDataSavePath">測試資料儲存路徑</lang:String>
+    <lang:String x:Key="ReportSavePath">報表儲存路徑</lang:String>
+    <lang:String x:Key="TestDataStorageDays">測試資料儲存天數</lang:String>
+    <lang:String x:Key="PLCStartPath">PLC開始路徑</lang:String>
+    <lang:String x:Key="PLCIP">PLC IP</lang:String>
+    <lang:String x:Key="Language">語言</lang:String>
+    <lang:String x:Key="SaveReportwithImage">報表含照片</lang:String>
+
+    <lang:String x:Key="FrontCameraID">前鏡頭ID</lang:String>
+    <lang:String x:Key="BackCameraID">後鏡頭ID</lang:String>
+    <lang:String x:Key="FrontCameraPixelSize">前鏡頭PixelSize</lang:String>
+    <lang:String x:Key="BackCameraPixelSize">後鏡頭PixelSize</lang:String>
+    <lang:String x:Key="LigthtComport">光源通訊端口</lang:String>
+
+    <lang:String x:Key="Chanel1">通道1</lang:String>
+    <lang:String x:Key="Chanel2">通道2</lang:String>
+    <lang:String x:Key="Chanel3">通道3</lang:String>
+    <lang:String x:Key="Chanel4">通道4</lang:String>
+    <lang:String x:Key="Chanel5">通道5</lang:String>
+
+    <lang:String x:Key="SaveSuccess">儲存成功</lang:String>
+    <lang:String x:Key="Q1">確定要儲存資料?</lang:String>
+    <lang:String x:Key="Confirmation">確認</lang:String>
+
+
+    <!--  Login  -->
+    <lang:String x:Key="Enter_UserName">請輸入帳號</lang:String>
+    <lang:String x:Key="Enter_Password">請輸入密碼</lang:String>
+    <lang:String x:Key="Login">登入</lang:String>
+
+    <!--  Calibration  -->
+    <lang:String x:Key="Front">正面</lang:String>
+    <lang:String x:Key="Back">背面</lang:String>
+    <lang:String x:Key="All">全部</lang:String>
+    <lang:String x:Key="SaveImage">儲存照片</lang:String>
+    <lang:String x:Key="OpenImage">開啟照片</lang:String>
+    <lang:String x:Key="TurnOver">翻面</lang:String>
+    <lang:String x:Key="Motion">動作</lang:String>
+    <lang:String x:Key="LightControl">燈源控制</lang:String>
+
+    <!--  InSpectionSetting  -->
+    <lang:String x:Key="Yield">良率</lang:String>
+    <lang:String x:Key="OK">良品數</lang:String>
+    <lang:String x:Key="NG">不良數</lang:String>
+    <lang:String x:Key="Vision">視覺</lang:String>
+    <lang:String x:Key="Result">量測結果</lang:String>
+    <lang:String x:Key="Spec">規格</lang:String>
+    <lang:String x:Key="Recipe">配方編號</lang:String>
+    <lang:String x:Key="auto">自動產生</lang:String>
+    <lang:String x:Key="Recent">上次生產</lang:String>
+    <lang:String x:Key="Batch">批號</lang:String>
+    <lang:String x:Key="Mode">模式</lang:String>
+    <lang:String x:Key="Cancel">取消</lang:String>
+
+    <lang:String x:Key="Index">項次</lang:String>
+    <lang:String x:Key="Direction">方向</lang:String>
+
+    <!--  Recipe  -->
+    <lang:String x:Key="Light">光源</lang:String>
+    <lang:String x:Key="ActiveRecipe">啟用配方</lang:String>
+    <lang:String x:Key="SuspendedRecipe">停用配方</lang:String>
+
+    <lang:String x:Key="new">新增</lang:String>
+    <lang:String x:Key="Tolerance">公差</lang:String>
+    <lang:String x:Key="Size">尺寸</lang:String>
+    <lang:String x:Key="Value">值</lang:String>
+    <lang:String x:Key="Unit">單位</lang:String>
+    <lang:String x:Key="Total">總數</lang:String>
+    <lang:String x:Key="Parameter">參數</lang:String>
+    <lang:String x:Key="FrontLight">正光</lang:String>
+    <lang:String x:Key="BackLight">背光</lang:String>
+    <lang:String x:Key="BackLight1">背光1</lang:String>
+    <lang:String x:Key="BackLight2">背光2</lang:String>
+    <lang:String x:Key="BackLight3">背光3</lang:String>
+    <lang:String x:Key="BackLight4">背光4</lang:String>
+
+    <lang:String x:Key="TestItem">測試項目</lang:String>
+    <lang:String x:Key="Linearity">直線性</lang:String>
+    <lang:String x:Key="MissingLine">漏線</lang:String>
+    <lang:String x:Key="FrontDirty">正面汙染</lang:String>
+    <lang:String x:Key="BackDirty">背面汙染</lang:String>
+    <lang:String x:Key="BeakEdge">邊緣鳥嘴</lang:String>
+    <lang:String x:Key="BeakCorner">角落鳥嘴</lang:String>
+    <lang:String x:Key="CrackEdge">邊緣崩角</lang:String>
+    <lang:String x:Key="CrackCorner">角落崩角</lang:String>
+    <lang:String x:Key="Thickness">板厚</lang:String>
+
+    <lang:String x:Key="Standard">標準</lang:String>
+    <lang:String x:Key="Offset">大小面</lang:String>
+    <lang:String x:Key="Offset2">偏移</lang:String>
+    <lang:String x:Key="Reject">報廢</lang:String>
+
+    <lang:String x:Key="RecipeItem">配方項目</lang:String>
+
+    <!--  Report  -->
+    <lang:String x:Key="Test_Number">測試編號</lang:String>
+    <lang:String x:Key="FrontLinearity">直線性</lang:String>
+    <lang:String x:Key="FrontMissingLine">漏線</lang:String>
+    <lang:String x:Key="FrontFrontDirty">正面汙染</lang:String>
+    <lang:String x:Key="BackBackDirty">背面汙染</lang:String>
+    <lang:String x:Key="BackBeakEdge">邊緣鳥嘴</lang:String>
+    <lang:String x:Key="BackBeakCorner">角落鳥嘴</lang:String>
+    <lang:String x:Key="BackCrackEdge">邊緣崩角</lang:String>
+    <lang:String x:Key="BackCrackCorner">角落崩角</lang:String>
+    <lang:String x:Key="BackThickness">板厚</lang:String>
+    <lang:String x:Key="SavePath">儲存路徑</lang:String>
+    <lang:String x:Key="Warning">警告</lang:String>
+    <lang:String x:Key="NoData">無測試資料</lang:String>
+    <lang:String x:Key="CorrectBatch">請查詢批號</lang:String>
+
+</ResourceDictionary>

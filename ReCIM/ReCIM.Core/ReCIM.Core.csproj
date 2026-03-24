@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CDD4C6DC-52F5-4AB9-AABF-2B044F526BBA}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>ReCIM.Core</RootNamespace>
+    <AssemblyName>ReCIM.Core</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MySql.Data, Version=6.6.5.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Users\user\.nuget\packages\mysql.data\6.6.7\lib\net40\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="API\IniManager.cs" />
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Model\MysqlActor.cs" />
+    <Compile Include="Model\MySQLHelper.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="mysql.data.9.4.0\.signature.p7s" />
+    <None Include="mysql.data.9.4.0\LICENSE" />
+    <None Include="mysql.data.9.4.0\MySql.Data.nuspec" />
+    <None Include="mysql.data.9.4.0\package\services\metadata\core-properties\934ae3f02f8941e39daba1964c3f7435.psmdcp" />
+    <None Include="mysql.data.9.4.0\README" />
+    <None Include="mysql.data.9.4.0\README.md" />
+    <None Include="mysql.data.9.4.0\_rels\.rels" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="mysql.data.9.4.0\lib\net462\MySql.Data.dll" />
+    <Content Include="mysql.data.9.4.0\lib\net462\MySql.Data.xml" />
+    <Content Include="mysql.data.9.4.0\lib\net48\MySql.Data.dll" />
+    <Content Include="mysql.data.9.4.0\lib\net48\MySql.Data.xml" />
+    <Content Include="mysql.data.9.4.0\lib\net8.0\MySql.Data.dll" />
+    <Content Include="mysql.data.9.4.0\lib\net8.0\MySql.Data.xml" />
+    <Content Include="mysql.data.9.4.0\lib\net9.0\MySql.Data.dll" />
+    <Content Include="mysql.data.9.4.0\lib\net9.0\MySql.Data.xml" />
+    <Content Include="mysql.data.9.4.0\lib\netstandard2.0\MySql.Data.dll" />
+    <Content Include="mysql.data.9.4.0\lib\netstandard2.0\MySql.Data.xml" />
+    <Content Include="mysql.data.9.4.0\lib\netstandard2.1\MySql.Data.dll" />
+    <Content Include="mysql.data.9.4.0\lib\netstandard2.1\MySql.Data.xml" />
+    <Content Include="mysql.data.9.4.0\logo-mysql-170x115.png" />
+    <Content Include="mysql.data.9.4.0\runtimes\win-x64\native\comerr64.dll" />
+    <Content Include="mysql.data.9.4.0\runtimes\win-x64\native\gssapi64.dll" />
+    <Content Include="mysql.data.9.4.0\runtimes\win-x64\native\k5sprt64.dll" />
+    <Content Include="mysql.data.9.4.0\runtimes\win-x64\native\krb5_64.dll" />
+    <Content Include="mysql.data.9.4.0\runtimes\win-x64\native\krbcc64.dll" />
+    <Content Include="mysql.data.9.4.0\[Content_Types].xml" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

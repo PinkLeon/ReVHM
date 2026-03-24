@@ -1,0 +1,14 @@
+D:\Git\VHM\新增資料夾\ReCIM\Core\obj\Debug\net8.0\Core.GeneratedMSBuildEditorConfig.editorconfig
+D:\Git\VHM\新增資料夾\ReCIM\Core\obj\Debug\net8.0\Core.AssemblyInfoInputs.cache
+D:\Git\VHM\新增資料夾\ReCIM\Core\obj\Debug\net8.0\Core.AssemblyInfo.cs
+D:\Git\VHM\新增資料夾\ReCIM\Core\obj\Debug\net8.0\Core.csproj.CoreCompileInputs.cache
+D:\Git\VHM\新增資料夾\ReCIM\Core\obj\Debug\net8.0\Core.csproj.AssemblyReference.cache
+D:\Git\VHM\新增資料夾\ReCIM\Core\bin\Debug\net8.0\Core.deps.json
+D:\Git\VHM\新增資料夾\ReCIM\Core\bin\Debug\net8.0\Core.dll
+D:\Git\VHM\新增資料夾\ReCIM\Core\bin\Debug\net8.0\Core.pdb
+D:\Git\VHM\新增資料夾\ReCIM\Core\bin\Debug\net8.0\halcondotnet.dll
+D:\Git\VHM\新增資料夾\ReCIM\Core\obj\Debug\net8.0\Core.csproj.Up2Date
+D:\Git\VHM\新增資料夾\ReCIM\Core\obj\Debug\net8.0\Core.dll
+D:\Git\VHM\新增資料夾\ReCIM\Core\obj\Debug\net8.0\refint\Core.dll
+D:\Git\VHM\新增資料夾\ReCIM\Core\obj\Debug\net8.0\Core.pdb
+D:\Git\VHM\新增資料夾\ReCIM\Core\obj\Debug\net8.0\ref\Core.dll

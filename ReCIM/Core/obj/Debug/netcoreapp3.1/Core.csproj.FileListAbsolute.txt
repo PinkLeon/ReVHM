@@ -1,0 +1,5 @@
+D:\Git\VHM\新增資料夾\ReCIM\Core\obj\Debug\netcoreapp3.1\Core.csproj.AssemblyReference.cache
+D:\Git\VHM\新增資料夾\ReCIM\Core\obj\Debug\netcoreapp3.1\Core.GeneratedMSBuildEditorConfig.editorconfig
+D:\Git\VHM\新增資料夾\ReCIM\Core\obj\Debug\netcoreapp3.1\Core.AssemblyInfoInputs.cache
+D:\Git\VHM\新增資料夾\ReCIM\Core\obj\Debug\netcoreapp3.1\Core.AssemblyInfo.cs
+D:\Git\VHM\新增資料夾\ReCIM\Core\obj\Debug\netcoreapp3.1\Core.csproj.CoreCompileInputs.cache

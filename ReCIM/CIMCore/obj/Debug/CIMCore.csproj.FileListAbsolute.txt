@@ -1,0 +1,10 @@
+D:\Git\VHM\新增資料夾\ReCIM\CIMCore\obj\Debug\CIMCore.csproj.AssemblyReference.cache
+D:\Git\VHM\新增資料夾\ReCIM\CIMCore\obj\Debug\MainWindow.g.cs
+D:\Git\VHM\新增資料夾\ReCIM\CIMCore\obj\Debug\App.g.cs
+D:\Git\VHM\新增資料夾\ReCIM\CIMCore\obj\Debug\CIMCore_Content.g.cs
+D:\Git\VHM\新增資料夾\ReCIM\CIMCore\obj\Debug\CIMCore_MarkupCompile.cache
+D:\Git\VHM\新增資料夾\ReCIM\CIMCore\obj\Debug\CIMCore_MarkupCompile.lref
+D:\Git\VHM\新增資料夾\ReCIM\CIMCore\obj\Debug\CIMCore.g.resources
+D:\Git\VHM\新增資料夾\ReCIM\CIMCore\obj\Debug\CIMCore.Properties.Resources.resources
+D:\Git\VHM\新增資料夾\ReCIM\CIMCore\obj\Debug\CIMCore.csproj.GenerateResource.cache
+D:\Git\VHM\新增資料夾\ReCIM\CIMCore\obj\Debug\CIMCore.csproj.CoreCompileInputs.cache

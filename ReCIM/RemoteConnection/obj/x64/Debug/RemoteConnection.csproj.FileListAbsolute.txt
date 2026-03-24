@@ -1,0 +1,30 @@
+C:\Users\qoose\Desktop\文件資料\客戶分類\[T]-TSM大铣刀\SourceCode\TSM\RemoteConnection\bin\x64\Debug\RemoteConnection.dll
+C:\Users\qoose\Desktop\文件資料\客戶分類\[T]-TSM大铣刀\SourceCode\TSM\RemoteConnection\bin\x64\Debug\RemoteConnection.pdb
+C:\Users\qoose\Desktop\文件資料\客戶分類\[T]-TSM大铣刀\SourceCode\TSM\RemoteConnection\obj\x64\Debug\RemoteConnection.csproj.AssemblyReference.cache
+C:\Users\qoose\Desktop\文件資料\客戶分類\[T]-TSM大铣刀\SourceCode\TSM\RemoteConnection\obj\x64\Debug\RemoteConnection.csproj.CoreCompileInputs.cache
+C:\Users\qoose\Desktop\文件資料\客戶分類\[T]-TSM大铣刀\SourceCode\TSM\RemoteConnection\obj\x64\Debug\RemoteConnection.dll
+C:\Users\qoose\Desktop\文件資料\客戶分類\[T]-TSM大铣刀\SourceCode\TSM\RemoteConnection\obj\x64\Debug\RemoteConnection.pdb
+C:\Users\qoose\Desktop\文件資料\客戶分類\[T]-泰國陶瓷基板\SourceCode\03_Software\Ceramic Inspection Machine\RemoteConnection\bin\x64\Debug\RemoteConnection.dll
+C:\Users\qoose\Desktop\文件資料\客戶分類\[T]-泰國陶瓷基板\SourceCode\03_Software\Ceramic Inspection Machine\RemoteConnection\bin\x64\Debug\RemoteConnection.pdb
+C:\Users\qoose\Desktop\文件資料\客戶分類\[T]-泰國陶瓷基板\SourceCode\03_Software\Ceramic Inspection Machine\RemoteConnection\obj\x64\Debug\RemoteConnection.csproj.AssemblyReference.cache
+C:\Users\qoose\Desktop\文件資料\客戶分類\[T]-泰國陶瓷基板\SourceCode\03_Software\Ceramic Inspection Machine\RemoteConnection\obj\x64\Debug\RemoteConnection.csproj.CoreCompileInputs.cache
+C:\Users\qoose\Desktop\文件資料\客戶分類\[T]-泰國陶瓷基板\SourceCode\03_Software\Ceramic Inspection Machine\RemoteConnection\obj\x64\Debug\RemoteConnection.dll
+C:\Users\qoose\Desktop\文件資料\客戶分類\[T]-泰國陶瓷基板\SourceCode\03_Software\Ceramic Inspection Machine\RemoteConnection\obj\x64\Debug\RemoteConnection.pdb
+D:\01_Project\03_CIM\03_Software\Ceramic Inspection Machine\RemoteConnection\bin\x64\Debug\RemoteConnection.dll
+D:\01_Project\03_CIM\03_Software\Ceramic Inspection Machine\RemoteConnection\bin\x64\Debug\RemoteConnection.pdb
+D:\01_Project\03_CIM\03_Software\Ceramic Inspection Machine\RemoteConnection\obj\x64\Debug\RemoteConnection.csproj.AssemblyReference.cache
+D:\01_Project\03_CIM\03_Software\Ceramic Inspection Machine\RemoteConnection\obj\x64\Debug\RemoteConnection.csproj.CoreCompileInputs.cache
+D:\01_Project\03_CIM\03_Software\Ceramic Inspection Machine\RemoteConnection\obj\x64\Debug\RemoteConnection.dll
+D:\01_Project\03_CIM\03_Software\Ceramic Inspection Machine\RemoteConnection\obj\x64\Debug\RemoteConnection.pdb
+C:\Users\User\Desktop\20230919\Ceramic Inspection Machine\RemoteConnection\bin\x64\Debug\RemoteConnection.dll
+C:\Users\User\Desktop\20230919\Ceramic Inspection Machine\RemoteConnection\bin\x64\Debug\RemoteConnection.pdb
+C:\Users\User\Desktop\20230919\Ceramic Inspection Machine\RemoteConnection\obj\x64\Debug\RemoteConnection.csproj.AssemblyReference.cache
+C:\Users\User\Desktop\20230919\Ceramic Inspection Machine\RemoteConnection\obj\x64\Debug\RemoteConnection.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\20230919\Ceramic Inspection Machine\RemoteConnection\obj\x64\Debug\RemoteConnection.dll
+C:\Users\User\Desktop\20230919\Ceramic Inspection Machine\RemoteConnection\obj\x64\Debug\RemoteConnection.pdb
+C:\Users\User\Desktop\20230921\Ceramic Inspection Machine\RemoteConnection\bin\x64\Debug\RemoteConnection.dll
+C:\Users\User\Desktop\20230921\Ceramic Inspection Machine\RemoteConnection\bin\x64\Debug\RemoteConnection.pdb
+C:\Users\User\Desktop\20230921\Ceramic Inspection Machine\RemoteConnection\obj\x64\Debug\RemoteConnection.csproj.AssemblyReference.cache
+C:\Users\User\Desktop\20230921\Ceramic Inspection Machine\RemoteConnection\obj\x64\Debug\RemoteConnection.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\20230921\Ceramic Inspection Machine\RemoteConnection\obj\x64\Debug\RemoteConnection.dll
+C:\Users\User\Desktop\20230921\Ceramic Inspection Machine\RemoteConnection\obj\x64\Debug\RemoteConnection.pdb

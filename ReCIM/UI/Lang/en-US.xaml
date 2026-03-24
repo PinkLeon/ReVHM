@@ -1,0 +1,139 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:lang="clr-namespace:System;assembly=mscorlib">
+    <!--  General  -->
+    <lang:String x:Key="Main">Main</lang:String>
+    <lang:String x:Key="Inspection">Inspection</lang:String>
+    <lang:String x:Key="Calibration">Calibration</lang:String>
+    <lang:String x:Key="Report">Report</lang:String>
+    <lang:String x:Key="UserManagement">User Management</lang:String>
+    <lang:String x:Key="RecipeManagement">Recipe Management</lang:String>
+    <lang:String x:Key="Initialize">Initialize</lang:String>
+    <lang:String x:Key="Add">Add</lang:String>
+    <lang:String x:Key="Activate">Activate</lang:String>
+    <lang:String x:Key="Deactivate">Deactivate</lang:String>
+    <lang:String x:Key="Suspend">Suspend</lang:String>
+    <lang:String x:Key="Save">Save</lang:String>
+    <lang:String x:Key="Exit">Exit</lang:String>
+    <lang:String x:Key="Close">Close</lang:String>
+    <lang:String x:Key="Item">Item</lang:String>
+
+    <!--  Recipe  -->
+    <lang:String x:Key="Search">Search</lang:String>
+    <lang:String x:Key="Go">Go</lang:String>
+    <lang:String x:Key="Today">Today</lang:String>
+    <!--  Setting  -->
+    <lang:String x:Key="Setting">Setting</lang:String>
+
+    <lang:String x:Key="TestDataSavePath">Test_Data Save Path</lang:String>
+    <lang:String x:Key="ReportSavePath">Report Save Path</lang:String>
+    <lang:String x:Key="TestDataStorageDays">Test data storage days</lang:String>
+    <lang:String x:Key="PLCStartPath">PLC Start Path</lang:String>
+    <lang:String x:Key="PLCIP">PLC IP</lang:String>
+    <lang:String x:Key="Language">Language</lang:String>
+    <lang:String x:Key="SaveReportwithImage">Save Report with Image</lang:String>
+
+    <lang:String x:Key="FrontCameraID">FrontCameraID</lang:String>
+    <lang:String x:Key="BackCameraID">BackCameraID</lang:String>
+    <lang:String x:Key="FrontCameraPixelSize">FrontCameraPixelSize</lang:String>
+    <lang:String x:Key="BackCameraPixelSize">BackCameraPixelSize</lang:String>
+    <lang:String x:Key="LigthtComport">LigthtComport</lang:String>
+
+    <lang:String x:Key="Chanel1">Chanel1</lang:String>
+    <lang:String x:Key="Chanel2">Chanel2</lang:String>
+    <lang:String x:Key="Chanel3">Chanel3</lang:String>
+    <lang:String x:Key="Chanel4">Chanel4</lang:String>
+    <lang:String x:Key="Chanel5">Chanel5</lang:String>
+
+    <lang:String x:Key="SaveSuccess">Save Success</lang:String>
+    <lang:String x:Key="Q1">Are you sure you want to save the Data?</lang:String>
+    <lang:String x:Key="Confirmation">Confirmation</lang:String>
+
+    <!--  Login  -->
+    <lang:String x:Key="Enter_UserName">Enter UserName</lang:String>
+    <lang:String x:Key="Enter_Password">Enter Password</lang:String>
+    <lang:String x:Key="Login">Login</lang:String>
+
+    <!--  Calibration  -->
+    <lang:String x:Key="Front">Front</lang:String>
+    <lang:String x:Key="Back">Back</lang:String>
+    <lang:String x:Key="All">All</lang:String>
+    <lang:String x:Key="SaveImage">SaveImage</lang:String>
+    <lang:String x:Key="OpenImage">OpenImage</lang:String>
+    <lang:String x:Key="TurnOver">Turn Over</lang:String>
+    <lang:String x:Key="Motion">Motion</lang:String>
+    <lang:String x:Key="LightControl">LightControl</lang:String>
+
+    <!--  InSpectionSetting  -->
+    <lang:String x:Key="Yield">Yield</lang:String>
+    <lang:String x:Key="OK">OK</lang:String>
+    <lang:String x:Key="NG">NG</lang:String>
+    <lang:String x:Key="Vision">Vision</lang:String>
+    <lang:String x:Key="Result">Result</lang:String>
+    <lang:String x:Key="Spec">Spec</lang:String>
+    <lang:String x:Key="Recipe">Recipe</lang:String>
+    <lang:String x:Key="auto">Auto</lang:String>
+    <lang:String x:Key="Recent">Recent</lang:String>
+    <lang:String x:Key="Batch">Batch</lang:String>
+    <lang:String x:Key="Mode">Mode</lang:String>
+    <lang:String x:Key="Cancel">Cancel</lang:String>
+
+    <lang:String x:Key="Index">Index</lang:String>
+    <lang:String x:Key="Direction">Direction</lang:String>
+
+    <!--  Recipe  -->
+    <lang:String x:Key="Light">Light</lang:String>
+    <lang:String x:Key="ActiveRecipe">Active Recipe</lang:String>
+    <lang:String x:Key="SuspendedRecipe">Suspended Recipe</lang:String>
+
+    <lang:String x:Key="new">New</lang:String>
+    <lang:String x:Key="Tolerance">Tolerance</lang:String>
+    <lang:String x:Key="Size">Size</lang:String>
+    <lang:String x:Key="Value">Value</lang:String>
+    <lang:String x:Key="Unit">Unit</lang:String>
+    <lang:String x:Key="Total">Total</lang:String>
+    <lang:String x:Key="Parameter">Parameter</lang:String>
+    <lang:String x:Key="FrontLight">Front Light</lang:String>
+    <lang:String x:Key="BackLight">Back Light</lang:String>
+    <lang:String x:Key="BackLight1">Back Light 1</lang:String>
+    <lang:String x:Key="BackLight2">Back Light 2</lang:String>
+    <lang:String x:Key="BackLight3">Back Light 3</lang:String>
+    <lang:String x:Key="BackLight4">Back Light 4</lang:String>
+
+    <!--  Test Item  -->
+    <lang:String x:Key="TestItem">Test Item</lang:String>
+    <lang:String x:Key="Linearity">Linearity</lang:String>
+    <lang:String x:Key="MissingLine">MissingLine</lang:String>
+    <lang:String x:Key="FrontDirty">FrontDirty</lang:String>
+    <lang:String x:Key="BackDirty">BackDirty</lang:String>
+    <lang:String x:Key="BeakEdge">BeakEdge</lang:String>
+    <lang:String x:Key="BeakCorner">BeakCorner</lang:String>
+    <lang:String x:Key="CrackEdge">CrackEdge</lang:String>
+    <lang:String x:Key="CrackCorner">CrackCorner</lang:String>
+    <lang:String x:Key="Thickness">Thickness</lang:String>
+
+    <lang:String x:Key="Standard">Standard</lang:String>
+    <lang:String x:Key="Offset">Offset</lang:String>
+    <lang:String x:Key="Offset2">Offset</lang:String>
+    <lang:String x:Key="Reject">Reject</lang:String>
+
+    <lang:String x:Key="RecipeItem">Recipe Item</lang:String>
+
+    <!--  Report  -->
+    <lang:String x:Key="Test_Number">Test_Number</lang:String>
+    <lang:String x:Key="FrontLinearity">Linearity</lang:String>
+    <lang:String x:Key="FrontMissingLine">MissingLine</lang:String>
+    <lang:String x:Key="FrontFrontDirty">FrontDirty</lang:String>
+    <lang:String x:Key="BackBackDirty">BackDirty</lang:String>
+    <lang:String x:Key="BackBeakEdge">BeakEdge</lang:String>
+    <lang:String x:Key="BackBeakCorner">BeakCorner</lang:String>
+    <lang:String x:Key="BackCrackEdge">CrackEdge</lang:String>
+    <lang:String x:Key="BackCrackCorner">CrackCorner</lang:String>
+    <lang:String x:Key="BackThickness">Thickness</lang:String>
+    <lang:String x:Key="SavePath">Save Path</lang:String>
+    <lang:String x:Key="Warning">Warning</lang:String>
+    <lang:String x:Key="NoData">No Test Data</lang:String>
+    <lang:String x:Key="CorrectBatch">Please check the batch number</lang:String>
+
+</ResourceDictionary>

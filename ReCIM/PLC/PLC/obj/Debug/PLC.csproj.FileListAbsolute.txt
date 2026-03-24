@@ -1,0 +1,5 @@
+C:\ReCIM\PLC\PLC\obj\Debug\PLC.csproj.AssemblyReference.cache
+C:\ReCIM\PLC\PLC\obj\Debug\MainWindow.g.cs
+C:\ReCIM\PLC\PLC\obj\Debug\App.g.cs
+C:\ReCIM\PLC\PLC\obj\Debug\PLC_MarkupCompile.cache
+C:\ReCIM\PLC\PLC\obj\Debug\PLC_MarkupCompile.lref
