@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AOIProject")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e76efd77906fe9c263f60fef981c32ad54d6ba4d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cb36b3e8c368ae5d00aa96af7f7853be51098552")]
 [assembly: System.Reflection.AssemblyProductAttribute("AOIProject")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AOIProject")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

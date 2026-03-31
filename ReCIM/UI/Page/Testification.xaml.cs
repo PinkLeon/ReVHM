@@ -231,7 +231,7 @@ namespace VHM
             AOIPerform aOIPerform = new AOIPerform(aOIContext, _coreParameter);
             await aOIPerform.Start();
 
-            var result = aOIContext.Result;
+            var result = aOIContext.Result.Where(n => n.Side == "Front").ToList();
 
             ObservableCollection<DisplayItem> MeasureResults = null;
 
@@ -308,7 +308,7 @@ namespace VHM
             AOIPerform aOIPerform = new AOIPerform(aOIContext, _coreParameter);
             await aOIPerform.Start();
 
-            var result = aOIContext.Result;
+            var result = aOIContext.Result.Where(n => n.Side == "Back").ToList();
 
             ObservableCollection<DisplayItem> MeasureResults = null;
 

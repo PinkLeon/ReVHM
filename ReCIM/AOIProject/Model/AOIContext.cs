@@ -25,7 +25,7 @@ namespace AOI.Model
 
         public AOICore AOICore { get; set; }
 
-
+        public List<string> Side { get; set; } = new List<string>();
 
         /// <summary>
         /// 將缺陷位置Overlay到原圖後的影像

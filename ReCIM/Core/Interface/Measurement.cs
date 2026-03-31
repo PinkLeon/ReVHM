@@ -62,6 +62,8 @@ namespace Core.Interface
 
 
 
+        public abstract string SideName { get; }
+
 
         ////1.找到正面還是背面,看圖的尺寸
         //public void GetHObject(HObject hObject)

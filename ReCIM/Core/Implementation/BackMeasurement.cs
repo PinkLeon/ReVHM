@@ -25,7 +25,7 @@ namespace Core.Implementation
         //private AOICore _aOICore;
 
         public MeasurementTable measurement { get; set; }
-
+        public override string SideName => "Back";
         //private ICoreParameter coreParameter;
         //public BackMeasurement(ICoreParameter coreParameter, AOICore aOICore) : base(coreParameter, aOICore)
         //{

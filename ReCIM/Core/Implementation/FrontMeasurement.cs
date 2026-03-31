@@ -27,7 +27,7 @@ namespace Core.Implementation
 
         //private ICoreParameter coreParameter;
 
-
+        public override string SideName => "Front";
         //public FrontMeasurement(ICoreParameter coreParameter, AOICore aOICore) : base(coreParameter, aOICore)
         //{
         //    this.coreParameter = coreParameter;

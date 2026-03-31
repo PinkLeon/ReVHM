@@ -19,6 +19,8 @@ namespace Core.Interface
 
         public bool BackResult { get; set; }
 
+        public string Side { get; set; }
+
         public HObject CurrentImage { get; set; }
         public HObject DefectRegions { get; set; }
 

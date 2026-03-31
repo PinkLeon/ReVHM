@@ -36,6 +36,7 @@ namespace AOIProject
             _context.Result.Clear();
             _context.CurrentImage.Clear();
             _context.OverlayImage.Clear();
+            _context.Side.Clear();
             //1.找出影像是正面或背面(需要?,若只傳一張影像,可由尺寸看是正面還是反面,若傳兩張怎分?
 
             //2.影像前處理(後續可統一優化,做前處理)
@@ -55,7 +56,8 @@ namespace AOIProject
 
                     //重新開始計時設定，否則下一次會直接timeout
                     CancellationTokenSource cts = new CancellationTokenSource();
-
+                    if (ele != null)
+                        _context.Side.Add(ele.SideName);
                     //設定演算法Timeout秒數，若超過就直接算NG
                     cts.CancelAfter(TimeSpan.FromSeconds(20));
                     try
@@ -76,7 +78,7 @@ namespace AOIProject
                         }, cts.Token);
 
                         var result = await task;
-
+                        result.Side = ele.SideName;
                         _context.Result.Add(result);
 
                         //任務完成或超時就結束
