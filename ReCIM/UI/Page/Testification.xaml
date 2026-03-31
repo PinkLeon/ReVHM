@@ -91,12 +91,12 @@
                         <DataGridTextColumn Binding="{Binding MeasuredValue}">
                             <DataGridTextColumn.Header>
                                 <Label
-              HorizontalAlignment="Stretch"
-              HorizontalContentAlignment="Center"
-              Content="MeasuredValue"
-              FontFamily="Times New Roman"
-              FontSize="16"
-              Foreground="White" />
+                                    HorizontalAlignment="Stretch"
+                                    HorizontalContentAlignment="Center"
+                                    Content="MeasuredValue"
+                                    FontFamily="Times New Roman"
+                                    FontSize="16"
+                                    Foreground="White" />
                             </DataGridTextColumn.Header>
                             <DataGridTextColumn.CellStyle>
                                 <Style TargetType="DataGridCell">
@@ -110,12 +110,12 @@
                         <DataGridTextColumn Binding="{Binding ToleranceType}">
                             <DataGridTextColumn.Header>
                                 <Label
-              HorizontalAlignment="Stretch"
-              HorizontalContentAlignment="Center"
-              Content="ToleranceType"
-              FontFamily="Times New Roman"
-              FontSize="16"
-              Foreground="White" />
+                                    HorizontalAlignment="Stretch"
+                                    HorizontalContentAlignment="Center"
+                                    Content="ToleranceType"
+                                    FontFamily="Times New Roman"
+                                    FontSize="16"
+                                    Foreground="White" />
                             </DataGridTextColumn.Header>
                             <DataGridTextColumn.CellStyle>
                                 <Style TargetType="DataGridCell">
@@ -147,8 +147,8 @@
                             </DataGridTextColumn.CellStyle>
                         </DataGridTextColumn>
 
-                      
-                      
+
+
                         <!--  Tolerance  -->
                         <DataGridTextColumn Binding="{Binding Tolerance}">
                             <DataGridTextColumn.Header>

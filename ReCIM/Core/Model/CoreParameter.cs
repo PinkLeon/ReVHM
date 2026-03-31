@@ -376,6 +376,7 @@ namespace Core
                 //}
                 //else
                 //{
+                // 相機畫素 1pixel 換算成um
                 d.MeasuredValue = ((double.Parse(d.MeasuredValue) * double.Parse(FrontPixelSize)) + Offset).ToString("0.00");
                 d.Spec = ((double.Parse(d.Spec) * double.Parse(FrontPixelSize)) + Offset).ToString("0.00");
                 //}

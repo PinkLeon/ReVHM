@@ -17,7 +17,7 @@ namespace AOI.Model
 
         //public FrontInspection frontInspection { get; set; }
 
-        public HObject CurrentImage { get; set; }
+        public List<HObject> CurrentImage { get; set; } = new List<HObject>();
 
         public HObject FrontImage { get; set; }
 
@@ -30,7 +30,7 @@ namespace AOI.Model
         /// <summary>
         /// 將缺陷位置Overlay到原圖後的影像
         /// </summary>
-        public HObject OverlayImage { get; set; }
+        public List<HObject> OverlayImage { get; set; } = new List<HObject>();
 
         public List<string> ListColors = new List<string>()
                                           { "red", "green", "blue", "cyan", "magenta", "yellow", "medium slate blue", "orange red", "spring green", "cadet blue", "coral" };

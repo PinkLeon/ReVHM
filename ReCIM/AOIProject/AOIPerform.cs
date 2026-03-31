@@ -26,12 +26,16 @@ namespace AOIProject
             _context = context;
             _context.AOICore = context.AOICore;
             _context.Measurements = context.Measurements;
+            _context.CurrentImage = context.CurrentImage;
+            _context.OverlayImage = context.OverlayImage;
             _parameters = parameters;
         }
 
         public async Task Start()
         {
             _context.Result.Clear();
+            _context.CurrentImage.Clear();
+            _context.OverlayImage.Clear();
             //1.找出影像是正面或背面(需要?,若只傳一張影像,可由尺寸看是正面還是反面,若傳兩張怎分?
 
             //2.影像前處理(後續可統一優化,做前處理)
@@ -103,16 +107,18 @@ namespace AOIProject
                     var defectValues = _context.Result.Select(n => n.DefectValues).ToList();
                     var defectClass = _context.Result.Select(n => n.ClassNumber).ToList();
 
-                    _context.CurrentImage = ele.Image;
+                    _context.CurrentImage.Add(ele.Image);
                     //統整檢測結果
                     //HOperatorSet.HeightWidthRatio(DefectRegion, out HTuple H, out HTuple W, out HTuple R);
                     //defectRegions.Add(ele.DefectRegionImage);
                     //defectValues.Add(ele.DefectValue);
                     //defectClass.Add(ele.classNumber - 1);
                     if (defectRegions.First() != null && defectRegions.First().IsInitialized()
-                        && _context.CurrentImage != null && _context.CurrentImage.IsInitialized() && defectClass.ToArray().Any())
+                        && _context.CurrentImage.Count > 0 && _context.CurrentImage.Last() != null
+                        && _context.CurrentImage.Last().IsInitialized()
+                        && defectClass.ToArray().Any())
                         //將缺陷區域標記在影像中 -->為何又要缺陷影像,又要標記?
-                        _context.OverlayImage = ProcessOverlayImage(defectRegions, _context.CurrentImage, new HTuple(defectClass.ToArray()));
+                        _context.OverlayImage.Add(ProcessOverlayImage(defectRegions, _context.CurrentImage.Last(), new HTuple(defectClass.ToArray())));
                 }
 
                 //5.原圖標出缺陷位置及分類 一樣把標出缺陷位置的疊圖,傳到Result

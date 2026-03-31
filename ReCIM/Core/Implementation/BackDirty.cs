@@ -20,8 +20,9 @@ namespace Core.Implementation
 
         public override async Task<Result> Do(ICoreParameter coreParameter, AOICore aOICore)
         {
+            var baseResult = await base.Do(coreParameter, aOICore);
             Result result = new Result();
-            result.ClassNumber = 4;
+            result.ClassNumber = 2;
             result.ItemName = "BackDirty";
             result.CurrentImage = new HObject();
             AOICore Data = aOICore;

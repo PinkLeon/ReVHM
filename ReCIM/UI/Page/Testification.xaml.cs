@@ -8,7 +8,6 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
-using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 
@@ -58,9 +57,9 @@ namespace VHM
         /// 目標:
         /// 1.正面,單一算法
         /// 1.1 正面,單算法,單片作業 --> 完成
-        /// 1.2 正面,單算法,多片作業--> 完成
+        /// 1.2 正面,單算法,多片作業
         /// 2.正面,多算法
-        /// 3.正+背面,單一算法
+        /// 3.正+背面,單一算法  --> 完成
         /// 4.正+背面,多算法
         /// </summary>
 
@@ -107,7 +106,7 @@ namespace VHM
             //step 1: 檢查是否初始化-確認有連通plc,光源有連接
             //Go button UI thread ,要用非同步執行while迴圈 不然會卡死
             //讓正面反面接續跑
-            await Task.Run(() => RunSwitch());
+            await Task.Run(async () => await RunSwitch());
 
             //ActionStart();
 
@@ -119,55 +118,65 @@ namespace VHM
 
         }
 
+        private async Task RunSwitch()
+        {
+            while (true)
+            {
+                if (StopProcessing)
+                {
+                    break;
+                }
+
+                BackRunning = false;
+                FrontRunning = true;
+                var runBack = await ActionStart();
+
+                await ActionStop(runBack);
+            }
+
+        }
+
         /// <summary>
         ///反覆做正反面動作(多執行緒)(非同步平行作業)
         /// </summary>
-        private void ActionStart()
+        private async Task<bool> ActionStart()
         {
-            bool runBack = true;
             //正面量測動作
-            Thread FrontAction = new Thread(async () =>
+            bool result = await Task.Run(async () =>
             {
-                runBack = await RunFront();
+                return await RunFront();
             });
-            FrontAction.Start();
+
+            await Task.Delay(5000);
+            return result;
+        }
+
+        private async Task ActionStop(bool result)
+        {
+            //正面動作
+            FrontRunning = false;
+            BackRunning = true;
 
             bool reWork = false;
-            if (runBack)
+            if (result)
             {
                 //反面量測動作
-                Thread BackAction = new Thread(async () =>
-                {
-                    reWork = await RunBack();
-                });
-                BackAction.Start();
+                await Task.Run(async () =>
+                 {
+                     reWork = await RunBack();
+                 });
 
             }
             else
             {
                 //背面站之後的動作
-                Thread NGAction = new Thread(async () =>
+                await Task.Run(async () =>
                 {
                     await NGRun(reWork);
                 });
-                NGAction.Start();
-
             }
 
-        }
-
-        private void ActionStop(Thread FrontAction)
-        {
-            //正面動作
-
-            FrontAction.Abort();
-
-            //反面動作
-            //Thread BackAction = new Thread(() =>
-            //{
-            //    RunBack();
-            //});
-            //BackAction.Start();
+            await Task.Delay(5000);
         }
 
         /// <summary>
@@ -179,100 +188,170 @@ namespace VHM
             list.Clear();
             // 於 UI 建立 ObservableCollection 並綁定（確保 UI 執行緒建立集合）
             bool feedback = false;
-            while (FrontRunning)
+
+            //此專案,用工廠方法和材料工廠好像有點過於複雜
+            //應該只要將影像 分成  是/否 為模擬模式
+            //1.光源和相機都只要 用介面 再實作
+            //2.正背面流程 也用介面,再實作,
+            //正背面流程有共同行為(和plc通訊,開燈,取像,關燈) 但又有不同的行為(檢測算法,判斷標準)
+            //所以可以將正背面流程分成兩個類別,但共用一個介面,裡面有共同行為的定義,再實作不同的行為
+            //正背面模擬時,可以實作同一個介面,裡面定義正背面共同行為,再實作不同的行為,但又不須和plc通訊,開燈,取像,關燈
+            //會變的部分要包起來
+
+            // 1.和plc通訊,接收到正面訊號後,開始啟動線掃描,開啟燈光,取像,關閉燈源
+            //利用 介面 + 策略模式 - 將正面 背面行為放一組(plc通訊,開燈,取像,關燈) 或 正背面分開 但就沒共同行為?
+            // Action介面 實作,模擬及實際的正反面動作 ,每個正反面動作有許多組合 設計模式P.160
+            // Inspection介面 底下有 產生動方法, 正反面檢測要實作此介面 
+            // Inspection 依賴 動作介面 正反面檢測,再實作 各種動作
+
+            //正面站(PizzaStore) - 做正面動作 (Action)才對 
+            // createAction style是 front (工廠方法) --> 不須硬套,這邊只需要用想要style的Action 即可
+
+            ////_coreParameter是共用變數,AOIContext 是 AOI資料層
+            //aOIContext = new AOIContext(_coreParameter);
+            ////正面檢測(抽像工廠)(Action是抽像類別)(產生的檢測方法依據抽象工廠)  recipe,type,應該包在coreparameter裡?
+            //Core.Interface.Action frontAction = new FrontAction(new FrontInspection(_coreParameter), Recipe, type, _coreParameter);
+            //應該只要呼叫prepare,其他應該都在裡面做完
+            //frontAction.prepare();
+            //prepare裡應該包含step 1~5
+            //step 1:開燈  燈光這類,可以在Global做,隨程式開啟和關閉
+            //step 2:呼叫擷取卡,做線掃描
+            //step 3:移動平台至拍照位 讓平台開始移動，讓Line Scan相機取像
+            //step 4:取像
+            flowProcess.Create();
+            flowProcess.FrontProcess();
+            FrontImage = flowProcess.fAction.GetImage();
+            aOIContext.AOICore.FrontImage = FrontImage;
+
+            //顯示影像
+            await DisplayImage(FrontImage, hSmartWindowFront);
+            //step 5:關燈
+            _coreParameter.fLControl.TurnOFF();
+
+            AOIPerform aOIPerform = new AOIPerform(aOIContext, _coreParameter);
+            await aOIPerform.Start();
+
+            var result = aOIContext.Result;
+
+            ObservableCollection<DisplayItem> MeasureResults = null;
+
+            // 一定在 UI thread 建立
+            Dispatcher.Invoke(() =>
             {
-                //此專案,用工廠方法和材料工廠好像有點過於複雜
-                //應該只要將影像 分成  是/否 為模擬模式
-                //1.光源和相機都只要 用介面 再實作
-                //2.正背面流程 也用介面,再實作,
-                //正背面流程有共同行為(和plc通訊,開燈,取像,關燈) 但又有不同的行為(檢測算法,判斷標準)
-                //所以可以將正背面流程分成兩個類別,但共用一個介面,裡面有共同行為的定義,再實作不同的行為
-                //正背面模擬時,可以實作同一個介面,裡面定義正背面共同行為,再實作不同的行為,但又不須和plc通訊,開燈,取像,關燈
-                //會變的部分要包起來
+                MeasureResults = new ObservableCollection<DisplayItem>();
 
-                // 1.和plc通訊,接收到正面訊號後,開始啟動線掃描,開啟燈光,取像,關閉燈源
-                //利用 介面 + 策略模式 - 將正面 背面行為放一組(plc通訊,開燈,取像,關燈) 或 正背面分開 但就沒共同行為?
-                // Action介面 實作,模擬及實際的正反面動作 ,每個正反面動作有許多組合 設計模式P.160
-                // Inspection介面 底下有 產生動方法, 正反面檢測要實作此介面 
-                // Inspection 依賴 動作介面 正反面檢測,再實作 各種動作
+                MainGrid.ItemsSource = MeasureResults;
+            });
 
-                //正面站(PizzaStore) - 做正面動作 (Action)才對 
-                // createAction style是 front (工廠方法) --> 不須硬套,這邊只需要用想要style的Action 即可
+            var data = await DisplayResult(result.Where(n => n.DefectValues != null).ToList());
 
-                ////_coreParameter是共用變數,AOIContext 是 AOI資料層
-                //aOIContext = new AOIContext(_coreParameter);
-                ////正面檢測(抽像工廠)(Action是抽像類別)(產生的檢測方法依據抽象工廠)  recipe,type,應該包在coreparameter裡?
-                //Core.Interface.Action frontAction = new FrontAction(new FrontInspection(_coreParameter), Recipe, type, _coreParameter);
-                //應該只要呼叫prepare,其他應該都在裡面做完
-                //frontAction.prepare();
-                //prepare裡應該包含step 1~5
-                //step 1:開燈  燈光這類,可以在Global做,隨程式開啟和關閉
-                //step 2:呼叫擷取卡,做線掃描
-                //step 3:移動平台至拍照位 讓平台開始移動，讓Line Scan相機取像
-                //step 4:取像
-                flowProcess.Create();
-                flowProcess.FrontProcess();
-                FrontImage = flowProcess.fAction.GetImage();
-                aOIContext.AOICore.FrontImage = FrontImage;
-
-                //顯示影像
-                await DisplayImage(FrontImage, hSmartWindowFront);
-                //step 5:關燈
-                _coreParameter.fLControl.TurnOFF();
-
-                AOIPerform aOIPerform = new AOIPerform(aOIContext, _coreParameter);
-                await aOIPerform.Start();
-
-                var result = aOIContext.Result;
-
-                ObservableCollection<DisplayItem> MeasureResults = null;
-
-                // 一定在 UI thread 建立
-                Dispatcher.Invoke(() =>
+            // 回 UI thread 更新
+            Dispatcher.Invoke(() =>
+            {
+                foreach (var item in data)
                 {
-                    MeasureResults = new ObservableCollection<DisplayItem>();
-
-                    MainGrid.ItemsSource = MeasureResults;
-                });
-
-                var data = await DisplayResult(result.Where(n => n.DefectValues != null).ToList());
-
-                // 回 UI thread 更新
-                Dispatcher.Invoke(() =>
-                {
-                    foreach (var item in data)
-                    {
-                        MeasureResults.Add(item);
-                    }
-                });
-
-                //顯示overlay影像
-                await DisplayImage(aOIContext.OverlayImage, hSmartWindowFront);
-
-                //step 8:移動至下一位置
-                pieceNumber++;
-
-                //檢測必備流程
-
-                // 9.由取得影像及檢測標準及公差,比較後判斷,規格是否在合格範圍並在畫面顯示正面結果
-                if (data.Last().Judgement == "NG")
-                {
-                    feedback = false;
+                    MeasureResults.Add(item);
                 }
-                else
-                {
-                    feedback = true;
-                }
+            });
 
-                // 10.若NG,儲存影像,不測背面,傳給plc檢測完畢
+            //顯示overlay影像
+            await DisplayImage(aOIContext.OverlayImage.First(), hSmartWindowFront);
 
-                //step 11:由正面拍照位至翻轉位
-                //await Global.PLCTFrontUse.WriteMR("12", true);
-                //STEP 12:由翻轉位至背面拍照位
-                //await Global.PLCTFrontUse.WriteMR("12", true);
+            //step 8:移動至下一位置
+            pieceNumber++;
 
+            //檢測必備流程
+
+            // 9.由取得影像及檢測標準及公差,比較後判斷,規格是否在合格範圍並在畫面顯示正面結果
+            if (data.First().Judgement == "NG")
+            {
+                feedback = false;
             }
+            else
+            {
+                feedback = true;
+            }
+
+            // 10.若NG,儲存影像,不測背面,傳給plc檢測完畢
+
+            //step 11:由正面拍照位至翻轉位
+            //await Global.PLCTFrontUse.WriteMR("12", true);
+            //STEP 12:由翻轉位至背面拍照位
+            //await Global.PLCTFrontUse.WriteMR("12", true);
+
+
             return feedback;
+        }
+
+        /// <summary>
+        /// 背面檢測流程
+        /// 動作基本上和正面類似,共用frontAction,但inspection要分開
+        /// </summary>
+        private async Task<bool> RunBack()
+        {
+            var list = new List<DisplayItem>();
+            list.Clear();
+            // 於 UI 建立 ObservableCollection 並綁定（確保 UI 執行緒建立集合）
+            bool backJudge = false;
+
+            // 1.和plc通訊,接收到背面訊號後,開啟燈光,取像,關閉燈源
+            flowProcess.Create();
+            flowProcess.BackProcess();
+            // 2.由取得影像及檢測標準及公差,比較後判斷,規格是否在合格範圍,並在畫面顯示背面結果
+            BackImage = flowProcess.bAction.GetImage();
+            aOIContext.AOICore.BackImage = BackImage;
+            //顯示影像
+            await DisplayImage(BackImage, hSmartWindowBack);
+            //step 5:關燈
+            _coreParameter.bLControl.TurnOFF();
+
+            AOIPerform aOIPerform = new AOIPerform(aOIContext, _coreParameter);
+            await aOIPerform.Start();
+
+            var result = aOIContext.Result;
+
+            ObservableCollection<DisplayItem> MeasureResults = null;
+
+            // 一定在 UI thread 建立
+            Dispatcher.Invoke(() =>
+            {
+                MeasureResults = new ObservableCollection<DisplayItem>(); //Binding 關鍵 :配合DataGridTextColumn
+
+                MainGrid.ItemsSource = MeasureResults;
+            });
+
+            var data = await DisplayResult(result.Where(n => n.DefectValues != null).ToList());
+
+            // 回 UI thread 更新
+            Dispatcher.Invoke(() =>
+            {
+                foreach (var item in data)
+                {
+                    MeasureResults.Add(item); //可以再追加區分正反面
+                }
+            });
+
+            //顯示overlay影像
+            await DisplayImage(aOIContext.OverlayImage.Last(), hSmartWindowBack);
+            if (data.Last().Judgement == "NG")
+            {
+                return false;
+            }
+            else
+            {
+                backJudge = true;
+            }
+
+            // 3.若NG,儲存影像,傳給plc檢測完畢
+            if (backJudge)
+            {
+                await NGRun(false);
+                return false;
+            }
+
+
+            //return false;
+            return backJudge;
         }
 
         private async Task<List<DisplayItem>> DisplayResult(List<Result> results)
@@ -315,101 +394,6 @@ namespace VHM
             });
 
         }
-
-        private void RunSwitch()
-        {
-            while (true)
-            {
-                if (StopProcessing)
-                {
-                    break;
-                }
-
-                BackRunning = false;
-                FrontRunning = true;
-                ActionStart();
-                Thread.Sleep(5000);
-
-                FrontRunning = false;
-                BackRunning = true;
-                Thread.Sleep(5000);
-            }
-
-        }
-
-
-        /// <summary>
-        /// 背面檢測流程
-        /// 動作基本上和正面類似,共用frontAction,但inspection要分開
-        /// </summary>
-        private async Task<bool> RunBack()
-        {
-            //var list = new List<DisplayItem>();
-            //list.Clear();
-            //// 於 UI 建立 ObservableCollection 並綁定（確保 UI 執行緒建立集合）
-            //bool backJudge = false;
-            //while (BackRunning)
-            //{
-            //    // 1.和plc通訊,接收到背面訊號後,開啟燈光,取像,關閉燈源
-            //    flowProcess.BackProcess();
-            //    // 2.由取得影像及檢測標準及公差,比較後判斷,規格是否在合格範圍,並在畫面顯示背面結果
-            //    BackImage = flowProcess.bAction.GetImage();
-            //    aOIContext.AOICore.BackImage = BackImage;
-            //    //顯示影像
-            //    await DisplayImage(BackImage, hSmartWindowBack);
-            //    //step 5:關燈
-            //    _coreParameter.bLControl.TurnOFF();
-
-            //    AOIPerform aOIPerform = new AOIPerform(aOIContext, _coreParameter);
-            //    await aOIPerform.Start();
-
-            //    var result = aOIContext.Result;
-
-            //    ObservableCollection<DisplayItem> MeasureResults = null;
-
-            //    // 一定在 UI thread 建立
-            //    Dispatcher.Invoke(() =>
-            //    {
-            //        MeasureResults = new ObservableCollection<DisplayItem>();
-
-            //        MainGrid.ItemsSource = MeasureResults;
-            //    });
-
-            //    var data = await DisplayResult(result.Where(n => n.DefectValues != null).ToList());
-
-            //    // 回 UI thread 更新
-            //    Dispatcher.Invoke(() =>
-            //    {
-            //        foreach (var item in data)
-            //        {
-            //            MeasureResults.Add(item);
-            //        }
-            //    });
-
-            //    //顯示overlay影像
-            //    await DisplayImage(aOIContext.OverlayImage, hSmartWindowBack);
-            //    if (data.Last().Judgement == "NG")
-            //    {
-            //        return false;
-            //    }
-            //    else
-            //    {
-            //        backJudge = true;
-            //    }
-
-            //    // 3.若NG,儲存影像,傳給plc檢測完畢
-            //    if (backJudge)
-            //    {
-            //        await NGRun(false);
-            //        return false;
-            //    }
-
-            //}
-            return false;
-            //return backJudge;
-        }
-
-
         /// <summary>
         /// 正面ng時,不跑背面的檢測流程
         /// </summary>
