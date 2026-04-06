@@ -44,7 +44,7 @@ namespace AOI.Model
             _coreParameter = coreParameter;
             FrontImage = frontImage;
             BackImage = backImage;
-            Measurements = new List<Measurement>() { new MissingLine(),
+            Measurements = new List<Measurement>() { new MissingLine(),new FrontDirty(),
                                         new BackDirty() };
         }
 
@@ -76,11 +76,14 @@ namespace AOI.Model
         {
             List<TestSpectation> specs = new List<TestSpectation>();
             string sql = $@"select A.item_name,B.standardvalue,B.tolerance,B.unit,
-                            A.id from test_item as A  
+                            A.id,D.`name`,D.tolerance_type from test_item as A  
                             left join test_spec as B
                             on A.id = B.test_item_id
                             left join product as C
-                            on C.id = B.product_id;";
+                            on C.id = B.product_id
+                            left join recipe as D
+                            on D.test_item_id =B.test_item_id 
+                            where D.`name` = '{type}';";
             Console.WriteLine(sql);
             specs = _coreParameter.MH.GetALL<TestSpectation>(sql).ToList();
             return specs;

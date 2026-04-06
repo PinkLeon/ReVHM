@@ -104,11 +104,14 @@ namespace AOIProject
                         //Class = 1;
                     }
 
-
                     var defectRegions = _context.Result.Select(n => n.DefectRegions).ToList();
+
+                    var frontDefectRegions = _context.Result.Where(n => n.Side == "Front").Select(n => n.DefectRegions).ToList();
+                    var backDefectRegions = _context.Result.Where(n => n.Side == "Back").Select(n => n.DefectRegions).ToList();
                     var defectValues = _context.Result.Select(n => n.DefectValues).ToList();
                     var defectClass = _context.Result.Select(n => n.ClassNumber).ToList();
-
+                    var frontDefectClass = _context.Result.Where(n => n.Side == "Front").Select(n => n.ClassNumber).ToList();
+                    var backDefectClass = _context.Result.Where(n => n.Side == "Back").Select(n => n.ClassNumber).ToList();
                     _context.CurrentImage.Add(ele.Image);
                     //統整檢測結果
                     //HOperatorSet.HeightWidthRatio(DefectRegion, out HTuple H, out HTuple W, out HTuple R);
@@ -119,8 +122,23 @@ namespace AOIProject
                         && _context.CurrentImage.Count > 0 && _context.CurrentImage.Last() != null
                         && _context.CurrentImage.Last().IsInitialized()
                         && defectClass.ToArray().Any())
-                        //將缺陷區域標記在影像中 -->為何又要缺陷影像,又要標記?
-                        _context.OverlayImage.Add(ProcessOverlayImage(defectRegions, _context.CurrentImage.Last(), new HTuple(defectClass.ToArray())));
+                    {
+                        if (ele.SideName == "Front")
+                        {
+                            //將缺陷區域標記在影像中 -->為何又要缺陷影像,又要標記?
+                            //正反缺陷分開
+                            _context.OverlayImage.Add(ProcessOverlayImage(frontDefectRegions
+                                , _context.CurrentImage.Last(), new HTuple(frontDefectClass.ToArray())));
+                        }
+                        else
+                        {
+                            //將缺陷區域標記在影像中 -->為何又要缺陷影像,又要標記?
+                            //正反缺陷分開
+                            _context.OverlayImage.Add(ProcessOverlayImage(backDefectRegions
+                                , _context.CurrentImage.Last(), new HTuple(backDefectClass.ToArray())));
+                        }
+                    }
+
                 }
 
                 //5.原圖標出缺陷位置及分類 一樣把標出缺陷位置的疊圖,傳到Result

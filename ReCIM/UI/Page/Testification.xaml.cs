@@ -95,7 +95,7 @@ namespace VHM
             aOICore.Thickness = 25;
 
             //step 6:檢測 AOICore 給AOI專用資料層  0402原本是從處方那裡選 
-            specfication = aOIContext.InitializeAOIParameter(aOICore, "0402");
+            specfication = aOIContext.InitializeAOIParameter(aOICore, "0603");
 
 
         }
@@ -254,8 +254,9 @@ namespace VHM
                 }
             });
 
+            int length = aOIContext.OverlayImage.Count();
             //顯示overlay影像
-            await DisplayImage(aOIContext.OverlayImage.First(), hSmartWindowFront);
+            await DisplayImage(aOIContext.OverlayImage[length - 2], hSmartWindowFront);
 
             //step 8:移動至下一位置
             pieceNumber++;

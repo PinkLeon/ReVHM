@@ -1,0 +1,23 @@
+# Visual Studio cache
+.vs/
+*.vsidx
+
+# Build results
+bin/
+obj/
+
+# Debug / SourceLink artifacts
+*.pdb
+*.cache
+*.sourcelink.json
+
+# User-specific files
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Auto-generated files
+*.Designer.cs
+*.g.cs
+*.g.i.cs
