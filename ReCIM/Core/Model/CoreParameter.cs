@@ -17,10 +17,9 @@ namespace Core
 {
     public class CoreParameter : ICoreParameter
     {
-        // 確保它是公開且靜態的存取點
-        //public ICoreParameter coreParameter { get; set; } = new CoreParameter();
-
+        //這要<再確認>下邏輯用法
         public ConcurrentQueue<Tuple<string, string, string>> LogStack = new ConcurrentQueue<Tuple<string, string, string>>();
+
         private bool isProcessingLogs = false;
         private readonly object lockObject = new object();
         public List<HObject> FrontMaxDefectImages { get; set; } = new List<HObject>();
@@ -31,13 +30,12 @@ namespace Core
         ///// 確認是否要開啟入料模擬
         ///// </summary>
         public bool Simulation { get; set; } = false;
-        public bool LogBusy { get; set; } = false;
+        //public bool LogBusy { get; set; } = false;
         //public int ReworkNumber = 0;
         //public int PieceNumber;
         public int DefectNumber { get; set; } = 0;
-        public string DefectName { get; set; } = "MissingLine";
 
-        public List<Measurement> InspectionList { get; set; }
+        //public List<Measurement> InspectionList { get; set; }
 
         public FLControl fLControl { get; set; } = new FLControl();
         public FrontGenImage fCamera { get; set; } = new FrontGenImage();
@@ -62,12 +60,11 @@ namespace Core
         public AOICore aOICore { get; set; }
         public CoreParameter()
         {
+            //建構式初始化必要屬性
             ini = new IniManager(
             AppDomain.CurrentDomain.BaseDirectory + @"\Setting.ini");
-
             Simulation = ini.ReadIni("Flow", "Simulation") == "0" ? false : true;
-            InspectionList = new List<Measurement>() { new MissingLine(),
-                                        new BackDirty() };
+            //InspectionList = new List<Measurement>() { };
             fLControl = new FLControl();
             Lang = ini.ReadIni("Operation", "language");
             FrontPixelSize = ini.ReadIni("Camera", "FrontPixleSize");
@@ -100,7 +97,13 @@ namespace Core
         public List<string> StateTable { get; set; }
         public bool ConnectionStatus { get; set; } = false;
 
+        /// <summary>
+        /// 這是否需要?
+        /// </summary>
         ConcurrentQueue<Tuple<string, string, string>> ICoreParameter.LogStack { get; set; }
+
+        //為何又用顯式實作? 因為這些屬性不需要被外部直接訪問，
+        //只有透過 ICoreParameter 介面才可以訪問，這樣可以更好地封裝內部實現細節。
         bool ICoreParameter.isProcessingLogs { get; set; }
         object ICoreParameter.lockObject { get; set; }
         int ICoreParameter.ReworkNumber { get; set; }
@@ -118,7 +121,6 @@ namespace Core
         static string absoluteIniPath = System.IO.Path.GetFullPath(
             System.IO.Path.Combine(System.AppDomain.CurrentDomain.BaseDirectory, @"..\..\Setting.ini")
         );
-
 
 
         string ICoreParameter.ZoomFactor { get; set; } = new IniManager(System.AppDomain.CurrentDomain.BaseDirectory + @"\Setting.ini").ReadIni("Camera", "ZoomFactor");
@@ -170,11 +172,13 @@ namespace Core
 
         public async Task WriteLog(string type, string log, string message)
         {
+            //排隊寫入log
             LogStack.Enqueue(new Tuple<string, string, string>(type, log, message));
 
             //啟動處理日誌的線程
             lock (lockObject)
             {
+                //鎖住,在狀態為非處理時,才處理log
                 if (!isProcessingLogs)
                 {
                     isProcessingLogs = true;
@@ -244,6 +248,7 @@ namespace Core
 
         public async Task ProcessLogs()
         {
+            //取出que,寫入log
             while (LogStack.TryDequeue(out var logEntry))
             {
                 await ExeWriteLog(logEntry);

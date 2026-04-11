@@ -73,7 +73,6 @@ namespace AOIProject
                         {
                             //是不是應該用static 建立_context就好,不用傳來傳去,testification建立再傳入即可?
 
-                            //正反面需分開? 還是其實只要排序即可?
                             return ele.Do(_parameters, _context.AOICore);
                         }, cts.Token);
 
@@ -133,7 +132,7 @@ namespace AOIProject
                         else
                         {
                             //將缺陷區域標記在影像中 -->為何又要缺陷影像,又要標記?
-                            //正反缺陷分開
+
                             _context.OverlayImage.Add(ProcessOverlayImage(backDefectRegions
                                 , _context.CurrentImage.Last(), new HTuple(backDefectClass.ToArray())));
                         }

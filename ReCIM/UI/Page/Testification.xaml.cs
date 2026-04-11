@@ -1,6 +1,5 @@
 ﻿using AOI.Model;
 using AOIProject;
-using Core.Implementation;
 using Core.Interface;
 using Core.Model;
 using HalconDotNet;
@@ -37,10 +36,13 @@ namespace VHM
         public ObservableCollection<DisplayItem> MeasureResults { get; set; }
 
         //正面檢測(抽像工廠)(Action是抽像類別)(產生的檢測方法依據抽象工廠) 
-        private Core.Interface.Action frontAction;
+        //private Core.Interface.Action frontAction;
+        //可思考一下,工廠方法和材料工廠適不適合用這case
 
         private int pieceNumber = 1;
-
+        /// <summary>
+        /// 按下停止
+        /// </summary>
         private bool StopProcessing = false;
 
         private bool FrontRunning = false;
@@ -57,10 +59,10 @@ namespace VHM
         /// 目標:
         /// 1.正面,單一算法
         /// 1.1 正面,單算法,單片作業 --> 完成
-        /// 1.2 正面,單算法,多片作業
-        /// 2.正面,多算法
+        /// 1.2 正面,單算法,多片作業 --> 完成
+        /// 2.正面,多算法 --> 完成
         /// 3.正+背面,單一算法  --> 完成
-        /// 4.正+背面,多算法
+        /// 4.正+背面,多算法 --> 完成
         /// </summary>
 
         public Testification()
@@ -70,10 +72,13 @@ namespace VHM
             this.Loaded += UserControl_Loaded;
         }
 
+        //依賴注入,建構子注入ICoreParameter,這樣就不需要在Testification裡面實例化CoreParameter,
+        //也不需要擔心CoreParameter的生命週期問題,由Host來管理
         public Testification(ICoreParameter coreParameter)
         {
             InitializeComponent();
             _coreParameter = coreParameter;
+            //相機光源初始化+開關燈取像
             flowProcess = new FlowProcess(_coreParameter);
             this.Loaded += (s, e) => UserControl_Loaded(s, e);
         }
@@ -88,16 +93,14 @@ namespace VHM
             //_coreParameter是共用變數,AOIContext 是 AOI資料層
             aOIContext = new AOIContext(FrontImage, BackImage, _coreParameter);
             //正面檢測(抽像工廠)(Action是抽像類別)(產生的檢測方法依據抽象工廠)  recipe,type,應該包在coreparameter裡?
-            frontAction = new FrontAction(new FrontInspection(_coreParameter), Recipe, type, _coreParameter);
+            //frontAction = new FrontAction(new FrontInspection(_coreParameter), Recipe, type, _coreParameter);
 
-            //AOICore是共用屬性
+            //AOICore是設定參數用
             AOICore aOICore = new AOICore();
             aOICore.Thickness = 25;
 
-            //step 6:檢測 AOICore 給AOI專用資料層  0402原本是從處方那裡選 
+            //step 6:檢測 AOICore 給AOI專用資料層  0603原本是從處方那裡選 
             specfication = aOIContext.InitializeAOIParameter(aOICore, "0603");
-
-
         }
 
 
@@ -118,6 +121,10 @@ namespace VHM
 
         }
 
+        /// <summary>
+        /// 模擬用的正反面轉換機制
+        /// </summary>
+        /// <returns></returns>
         private async Task RunSwitch()
         {
             while (true)
@@ -127,8 +134,8 @@ namespace VHM
                     break;
                 }
 
-                BackRunning = false;
-                FrontRunning = true;
+                //BackRunning = false;
+                //FrontRunning = true;
                 var runBack = await ActionStart();
 
                 await ActionStop(runBack);
@@ -154,8 +161,8 @@ namespace VHM
         private async Task ActionStop(bool result)
         {
             //正面動作
-            FrontRunning = false;
-            BackRunning = true;
+            // FrontRunning = false;
+            //BackRunning = true;
 
             bool reWork = false;
             if (result)
@@ -218,22 +225,25 @@ namespace VHM
             //step 2:呼叫擷取卡,做線掃描
             //step 3:移動平台至拍照位 讓平台開始移動，讓Line Scan相機取像
             //step 4:取像
+            //流程初始化
             flowProcess.Create();
+            //開始正面流程
             flowProcess.FrontProcess();
             FrontImage = flowProcess.fAction.GetImage();
+            //影像塞到AOI資料層
             aOIContext.AOICore.FrontImage = FrontImage;
 
             //顯示影像
             await DisplayImage(FrontImage, hSmartWindowFront);
             //step 5:關燈
             _coreParameter.fLControl.TurnOFF();
-
+            //new AOI流程層
             AOIPerform aOIPerform = new AOIPerform(aOIContext, _coreParameter);
+            //執行AOI算法
             await aOIPerform.Start();
-
+            //從AOI資料層拿結果
             var result = aOIContext.Result.Where(n => n.Side == "Front").ToList();
-
-            ObservableCollection<DisplayItem> MeasureResults = null;
+            MeasureResults = null;
 
             // 一定在 UI thread 建立
             Dispatcher.Invoke(() =>
@@ -243,6 +253,7 @@ namespace VHM
                 MainGrid.ItemsSource = MeasureResults;
             });
 
+            //顯示結果
             var data = await DisplayResult(result.Where(n => n.DefectValues != null).ToList());
 
             // 回 UI thread 更新
@@ -266,6 +277,7 @@ namespace VHM
             // 9.由取得影像及檢測標準及公差,比較後判斷,規格是否在合格範圍並在畫面顯示正面結果
             if (data.First().Judgement == "NG")
             {
+                // 10.若NG,儲存影像,不測背面,傳給plc檢測完畢
                 feedback = false;
             }
             else
@@ -273,7 +285,6 @@ namespace VHM
                 feedback = true;
             }
 
-            // 10.若NG,儲存影像,不測背面,傳給plc檢測完畢
 
             //step 11:由正面拍照位至翻轉位
             //await Global.PLCTFrontUse.WriteMR("12", true);
@@ -311,7 +322,7 @@ namespace VHM
 
             var result = aOIContext.Result.Where(n => n.Side == "Back").ToList();
 
-            ObservableCollection<DisplayItem> MeasureResults = null;
+            MeasureResults = null;
 
             // 一定在 UI thread 建立
             Dispatcher.Invoke(() =>

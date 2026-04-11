@@ -32,9 +32,6 @@ namespace AOI.Model
         /// </summary>
         public List<HObject> OverlayImage { get; set; } = new List<HObject>();
 
-        public List<string> ListColors = new List<string>()
-                                          { "red", "green", "blue", "cyan", "magenta", "yellow", "medium slate blue", "orange red", "spring green", "cadet blue", "coral" };
-
 
         public List<Measurement> Measurements { get; set; }
 
@@ -48,9 +45,14 @@ namespace AOI.Model
                                         new BackDirty() };
         }
 
+        /// <summary>
+        /// 由type找資料庫對應基板相關參數
+        /// </summary>
+        /// <param name="aOICore"></param>
+        /// <param name="type"></param>
+        /// <returns></returns>
         public List<TestSpectation> InitializeAOIParameter(AOICore aOICore, string type)
         {
-
             //讀取影像縮放設定
             aOICore.ZoomFactor = double.TryParse(_coreParameter.ZoomFactor, out double zoomfactor) ? zoomfactor : 0;
 
@@ -58,6 +60,7 @@ namespace AOI.Model
             var specData = GetSpec(type).OrderBy(n => n.id).ToList();
             //下面這些要從資料庫可以撈得到
             aOICore.TestSpectations = specData.OrderBy(n => n.id).ToList();
+            //規格可從基板型號找
             aOICore.GridHeight = 0.8;
             aOICore.GridWidth = 1.5;
             aOICore.PixelSize = 5;

@@ -9,14 +9,7 @@ namespace Core.Implementation
 
     public class BackDirty : BackMeasurement
     {
-        //private ICoreParameter _CoreParameter;
-        //public AOICore _aOICore;
-        //public BackDirty(ICoreParameter coreParameter, AOICore aOICore) : base(coreParameter, aOICore)
 
-        //{
-        //    _CoreParameter = coreParameter;
-        //    _aOICore = aOICore;
-        //}
 
         public override async Task<Result> Do(ICoreParameter coreParameter, AOICore aOICore)
         {

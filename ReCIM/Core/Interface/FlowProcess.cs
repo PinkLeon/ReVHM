@@ -7,7 +7,9 @@ namespace Core.Interface
     /// </summary>
     public class FlowProcess
     {
-        //不同情境下,做不同的事情
+        /// <summary>
+        /// 不同情境下,做不同的事情 (共用資料層)
+        /// </summary>
         private ICoreParameter _coreParameter;
         public IAction fAction;
         public IAction bAction;

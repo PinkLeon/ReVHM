@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 namespace Core.Interface
 {
     /// <summary>
-    /// 這個介面有啥好處?
+    /// 這個介面有啥好處? 多客戶 / 多版本可切換
     /// </summary>
     public interface ICoreParameter
     {
@@ -30,11 +30,11 @@ namespace Core.Interface
         /// 確認是否要開啟入料模擬
         /// </summary>
         public bool Simulation { get; set; }
-        public bool LogBusy { get; set; }
+        //public bool LogBusy { get; set; }
         public int ReworkNumber { get; set; }
         public int PieceNumber { get; set; }
         public int DefectNumber { get; set; }
-        public string DefectName { get; set; }
+
         public bool IsCameraInit { get; set; }
         public bool IsPLCInit { get; set; }
         public bool IsDBInit { get; set; }
@@ -66,7 +66,7 @@ namespace Core.Interface
         //public  string FrontPixelSize { get; set; } = new IniManager(System.AppDomain.CurrentDomain.BaseDirectory + @"\Setting.ini").ReadIni("Camera", "FrontPixleSize");
         //public  string BackPixelSize = new IniManager(System.AppDomain.CurrentDomain.BaseDirectory + @"\Setting.ini").ReadIni("Camera", "BackCameraPixleSize");
         //public  string SaveAllImage = new IniManager(System.AppDomain.CurrentDomain.BaseDirectory + @"\Setting.ini").ReadIni("Flow", "SaveAllImage");
-        public List<Measurement> InspectionList { get; set; }
+        //public List<Measurement> InspectionList { get; set; }
 
         //事件委派
         //public delegate void CIMEventEventHandle(CIMEventArg Data);

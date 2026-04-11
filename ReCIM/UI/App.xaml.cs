@@ -16,24 +16,19 @@ namespace UI
     /// </summary>
     public partial class App : Application
     {
-        public readonly ICoreParameter _coreParameter;
+        // 1. 這是你的「內部存取點」
+        private ICoreParameter _coreParameter;
 
+        // 2. 這是給「外面存取點」（就像 Global 變數）
+        // 只要 Host 啟動了，App.Current.Core 就有用
+        public static ICoreParameter Core => ((App)Current)._coreParameter;
         private static List<LanguageCore> Languagelist;
 
-        //Services.AddSingleton<ICoreParameter, CoreParameterService>();
-        // 💡 這確保了：CoreParameterService 只會被創建一次！
 
         public IHost AppHost { get; private set; }   // ← 宣告 AppHost
 
         public App()
         {
-            // 將實例賦值給欄位，以便 App 類別內部使用
-            _coreParameter = new CoreParameter();
-
-            // 2. 執行初始化操作，現在可以安全地使用 _coreParameter
-            //LoadLanguage();
-
-            Get_Language(new IniManager(System.AppDomain.CurrentDomain.BaseDirectory + @"\Setting.ini").ReadIni("Operation", "language"));
 
 
             this.Exit += App_Exit;
@@ -48,30 +43,38 @@ namespace UI
             }
         }
 
-        // 4. 不要忘記啟動 Host 和主視窗 (在 OnStartup 中)
+        /// <summary>
+        /// 換客戶時只要像下面
+        /// </summary>
+        /// <param name="e"></param>
+        //switch (customer)
+        //{
+        //    case "KINSUS":
+        //        services.AddSingleton<ICoreParameter, CoreParameterKINSUS>();
+        //        break;
+        //}
+
         protected override async void OnStartup(StartupEventArgs e)
         {
-            // 3. 建立 Host
+            // 1. 建立並啟動 Host ,Host 主要負責幫你管理程式的生命週期和資源分配。
             AppHost = Host.CreateDefaultBuilder()
-             .ConfigureServices((context, services) =>
-             {
-                 // **修正 2: 註冊已存在的實例**
-                 // 這會將您在步驟 1 創建並初始化的實例註冊為 ICoreParameter 的單例
-                 services.AddSingleton<ICoreParameter>(_coreParameter);
-                 // 註冊 MainWindow
-                 services.AddSingleton<Testification>();
-                 // 註冊您的其他服務
-
-             })
-             .Build();
+                .ConfigureServices((services) =>
+                {
+                    services.AddSingleton<ICoreParameter, CoreParameter>();
+                    services.AddSingleton<Testification>();
+                }).Build();
 
             await AppHost.StartAsync();
 
-            //Get_Language(new IniManager(System.AppDomain.CurrentDomain.BaseDirectory + @"\Setting.ini").ReadIni("Operation", "language"));
+            // 💡 捨棄反射！直接簡單賦值
+            _coreParameter = AppHost.Services.GetRequiredService<ICoreParameter>();
 
-
+            // 2. 現在 _coreParameter 有值了，可以安全調用
+            Get_Language(new IniManager(AppDomain.CurrentDomain.BaseDirectory + @"\Setting.ini").ReadIni("Operation", "language"));
             LoadLanguage();
 
+            //用Testfi時,請DI賦值
+            // 3. 顯示視窗
             var testWindow = AppHost.Services.GetRequiredService<Testification>();
             testWindow.Show();
 
@@ -80,8 +83,6 @@ namespace UI
 
         private void LoadLanguage()
         {
-
-
             ResourceDictionary langRd = null;
             try
             {

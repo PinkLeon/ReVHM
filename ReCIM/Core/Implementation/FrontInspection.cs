@@ -1,6 +1,5 @@
 ﻿using Core.Interface;
 using HalconDotNet;
-using System.Collections.Generic;
 
 namespace Core.Implementation
 {
@@ -45,10 +44,10 @@ namespace Core.Implementation
         /// 可new 一組FrontMeasurement list,使用時,讓此組list Do算法
         /// </summary>
         /// <returns></returns>
-        public List<Measurement> CreateMeasurement()
-        {
-            return coreParameter.InspectionList;
-        }
+        //public List<Measurement> CreateMeasurement()
+        //{
+        //    return coreParameter.InspectionList;
+        //}
 
         public Result CreateJudgement()
         {

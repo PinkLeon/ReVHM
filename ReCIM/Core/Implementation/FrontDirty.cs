@@ -41,7 +41,6 @@ namespace Core.Implementation
 
                 try
                 {
-
                     //降影像解析度
                     HOperatorSet.ZoomImageFactor(Image, out ho_Image, Data.ZoomFactor, Data.ZoomFactor, "constant");
 
